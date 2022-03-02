@@ -6,6 +6,8 @@
 
 include __const
 include __header
+include __sliders
+include __gallery
 include __forms
 include __footer
 
@@ -17,121 +19,52 @@ html(lang="ru-RU")
     +head
   body
     .site__header
-      .topLine__area
-        .topLine
-          .topInfo__area
-            .topInfo__item
-              i.fa.fa-car(aria-hidden='true')
-              span Выезд специалиста БЕСПЛАТНО!
-              // <i class="fa fa-map-signs" aria-hidden="true"></i>
-              // <span>г. Саратов, улица Слонова, дом 1, офис "Каркас64"</span>
-          .topLine__contArea
-            .topLine__cont
-              i.fa.fa-phone-square(aria-hidden='true')
-              a(href='tel:778801') 77-88-01
-            .topLine__cont
-              i.fa.fa-envelope(aria-hidden='true')
-              a(href='mailto:info@karkas64.ru') info@karkas64.ru
-            .topLine__cont.topLine__cont_btn.js_btnZ
-              i.fa.fa-volume-control-phone(aria-hidden='true')
-              span Заказать звонок
-      .header__area
-        header.header
-          .header__logo
-            a(href='#')
-              img(src='assets/img/logo1c.png' alt='Каркас64')
-          nav.topMenu__outer
-            .menuButton__outer
-              .menuButton
-                span
-                span
-                span
-            ul.topMenu
-              li.active
-                a(href='#') Главная
-              li
-                a(href='#') Услуги
-              li
-                a(href='#') Проекты
-              li
-                a(href='#') Портфолио
-              li
-                a(href='#') Статьи
-              li
-                a(href='#') Контакты
+      +header
     .site__center
-      .mainSlider
-        .swiper-container.swiper-container1
-          .swiper-wrapper
-            .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/slide1.jpg);')
-              .swiper__cadr
-                .swiper__inner1
-                  .swiper__title1
-                    | СТРОИТЕЛЬСТВО КАРКАСНЫХ ДОМОВ
-                  .swiper__text1
-                    | Строим каркасные дома в Саратове и Энгельсе по канадской и скандинавской технологии
-                  .swiper__link1
-                    a(href='#') Подробнее...
-            .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/slide2.jpg);')
-              .swiper__cadr
-                .swiper__inner1
-                  .swiper__title1
-                    | ВНУТРЕННЯЯ ОТДЕЛКА ДЕРЕВОМ
-                  .swiper__text1
-                    | Имитация бруса, блок-хаус, вагонка. Любые решения для создания уюта и тепла Вашего дома!
-                  .swiper__link1
-                    a(href='#') Подробнее...
-            .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/slide3.jpg);')
-              .swiper__cadr
-                .swiper__inner1
-                  .swiper__title1
-                    | Пристройки, веранды, террасы
-                  .swiper__text1
-                    | Открытые и закрытые, по каркасной технологии, быстро и качественно!
-                  .swiper__link1
-                    a(href='#') Подробнее...
-          .swiper-pagination.swiper-pagination1
-          .swiper-pagination.swiper-button-prev.swiper-button-prev1
-            i.fa.fa-angle-left(aria-hidden='true')
-          .swiper-pagination.swiper-button-next.swiper-button-next1
-            i.fa.fa-angle-right(aria-hidden='true')
+      +mainSlider
       .page__area
         .page
           .title1.title2_center
-            h1 Заголовок H1
+            h1 СТРОИТЕЛЬСТВО КАРКАСНЫХ ДОМОВ И КОТТЕДЖЕЙ В САРАТОВЕ И ЭНГЕЛЬСЕ
           .content
-            h2 Заголовок h2
-            h3 Заголовок h3
-            h4 Заголовок h4
-            h5 Заголовок h5
-            h6 Заголовок h6
             p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at eaque eos error et laborum minus
-              | natus necessitatibus veniam voluptatem?
+              strong Малоэтажное каркасное строительство 
+              |  — основной вид деятельности нашей компании.
             p
-              | Lorem ipsum dolor sit amet, 
-              a(href='/') consectetur adipisicing elit
-              | . Dolorem dolores magni odio
-              |               possimus, rem tempora!
-            img(src='assets/img/img1.jpg' alt='1' style='float: left; margin-right: 20px;')
+              | Возведение объектов по каркасной технологии — современный, экономичный, экологичный и достаточно быстрый процесс. Он занимает небольшой промежуток времени: в среднем от 1-го до 3-х месяцев на объект. И такая технология обходится заказчику значительно дешевле, чем выполнение работ из кирпича, бруса, и других материалов.
             p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eaque labore laboriosam libero minima
-              | nisi officiis recusandae tempora tenetur voluptatem? Accusamus, aliquid at culpa itaque labore libero
-              | nostrum quod repellendus.
-            p(align='center')
-              img(src='assets/img/img1.jpg' alt='2')
+              | Огромный опыт нашей команды строителей и проектировщиков позволяет выполнить любой проект по возведению каркасного строения. Мы всегда готовы предложить своим клиентам различные варианты проектов, которые будут отвечать вашим требованиям и нуждам.
+            p
+              | Мы осуществляем строительство по скандинавской и канадской технологиям таких объектов как:
             ul
-              li Lorem ipsum dolor.
-              li Lorem ipsum.
               li
-                | Lorem ipsum 
-                strong dolor
-                |  sit amet.
+                a(href='https://karkas64.ru/stroitelstvo-karkasnyix-domov/') каркасные дома
+                |  разной этажности
               li
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, ipsa. Lorem ipsum dolor sit amet,
-                | consectetur adipisicing elit. Corporis, ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                | Corporis, ipsa.
-              li Lorem.
+                a(href='https://karkas64.ru/pristrojki/') пристройки к домам
+                |  и другим объектам
+              li
+                | возводим 
+                a(href='https://karkas64.ru/terrasyi-i-verandyi/') веранды 
+                | открытого и закрытого исполнения
+              li
+                | разбиваем 
+                a(href='https://karkas64.ru/terrasyi-i-verandyi/') террасы
+              li
+                | строим 
+                a(href='https://karkas64.ru/bani-pod-klyuch/') бани под ключ
+                |  по каркасной технологии
+              li
+                | выполняем внутреннюю и наружную 
+                a(href='https://karkas64.ru/otdelka-derevom/') отделку деревом
+            p
+              | Готовое строение обладает небольшим весом, что позволяет экономить на фундаменте. Малозаглубленный фундамент каркасного дома не дает деформацию и усадку.
+            p
+              | Мы используем только 
+              strong качественные, проверенные временем материалы
+              | , что дает возможность эксплуатировать готовые объекты долгие годы. Такие постройки с легкостью выдерживают суровые климатические условия. Не даром они используются на крайнем севере, где температура варьируется от +30 до -50 градусов в течение года.
+            p Все коммуникации с легкостью скрываются под обшивкой конструкции.
+            p Также мы выполняем работы по демонтажу, реконструкции и достройке.
       .catalog__area
         .catalog__outer
           .title2.title2_center
@@ -169,41 +102,13 @@ html(lang="ru-RU")
         .gallery__outer
           .title2.title2_center
             h2 Галерея H2
-          .gallery
-            .gallery__item
-              a(href='assets/img/catalog/01.jpg' data-fancybox='group' data-caption='002')
-                img(src='assets/img/catalog/01.jpg' alt='1')
-            .gallery__item
-              a(href='assets/img/catalog/02.jpg' data-fancybox='group' data-caption='002')
-                img(src='assets/img/catalog/02.jpg' alt='1')
-            .gallery__item
-              a(href='assets/img/catalog/03.jpg' data-fancybox='group' data-caption='002')
-                img(src='assets/img/catalog/03.jpg' alt='1')
-            .gallery__item
-              a(href='assets/img/catalog/04.jpg' data-fancybox='group' data-caption='002')
-                img(src='assets/img/catalog/04.jpg' alt='1')
-            .gallery__item
-              a(href='assets/img/catalog/05.jpg' data-fancybox='group' data-caption='002')
-                img(src='assets/img/catalog/05.jpg' alt='1')
+          +gallery
       .gallery__area
         .gallery__outer
           .title2.title2_center
             h2 Видеогалерея H2
-          .videoBox__area
-            .videoBox__outer
-              .videoBox
-                a(data-fancybox='' href='https://www.youtube.com/watch?v=dl16e_mG6hg')
-                  img(src='https://img.youtube.com/vi/dl16e_mG6hg/sddefault.jpg' alt='')
-            .videoBox__outer
-              .videoBox
-                a(data-fancybox='' href='https://www.youtube.com/watch?v=P5csD0SX8jI')
-                  img(src='https://img.youtube.com/vi/P5csD0SX8jI/sddefault.jpg' alt='')
-      .ig__area
-        .ig__outer
-          .title2.title2_center
-            h2 Наш Instagram
-          .ig
-            #instafeed.instafeed
+          +videogallery
+      
       .dBox__area
         .dBox
           .dBox__left

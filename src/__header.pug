@@ -1,2 +1,43 @@
 mixin header 
-  .header
+  .topLine__area
+    .topLine
+      .topInfo__area
+        .topInfo__item
+          i.fa.fa-car(aria-hidden='true')
+          span Выезд специалиста БЕСПЛАТНО!
+          // <i class="fa fa-map-signs" aria-hidden="true"></i>
+          // <span>г. Саратов, улица Слонова, дом 1, офис "Каркас64"</span>
+      .topLine__contArea
+        .topLine__cont
+          i.fa.fa-phone-square(aria-hidden='true')
+          a(href='tel:778801') 77-88-01
+        .topLine__cont
+          i.fa.fa-envelope(aria-hidden='true')
+          a(href='mailto:info@karkas64.ru') info@karkas64.ru
+        .topLine__cont.topLine__cont_btn.js_btnZ
+          i.fa.fa-volume-control-phone(aria-hidden='true')
+          span Заказать звонок
+  .header__area
+    header.header
+      .header__logo
+        a(href='#')
+          img(src='assets/img/logo1c.png' alt='Каркас64')
+      nav.topMenu__outer
+        .menuButton__outer
+          .menuButton
+            span
+            span
+            span
+        ul.topMenu
+          li.active
+            a(href='#') Главная
+          li
+            a(href='#') Услуги
+          li
+            a(href='#') Проекты
+          li
+            a(href='#') Портфолио
+          li
+            a(href='#') Статьи
+          li
+            a(href='#') Контакты
