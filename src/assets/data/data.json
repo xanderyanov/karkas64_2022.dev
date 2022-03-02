@@ -22,7 +22,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/01.jpg"
+			"img": "assets/img/ecatalog/01.jpg"
 		}
 	],
 
@@ -34,7 +34,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/01.jpg"
+			"img": "assets/img/ecatalog/01.jpg"
 		},
 		{
 			"id": "321321322",
@@ -43,7 +43,7 @@
 			"discount": "-30%",
 			"price": "2500",
 			"oldPrice": "3000",
-			"img": "btlassets/img/ecatalog/02.jpg"
+			"img": "assets/img/ecatalog/02.jpg"
 		},
 		{
 			"id": "321321323",
@@ -52,7 +52,7 @@
 			"discount": "",
 			"price": "2500",
 			"oldPrice": "",
-			"img": "btlassets/img/ecatalog/03.jpg"
+			"img": "assets/img/ecatalog/03.jpg"
 		},
 		{
 			"id": "321321324",
@@ -61,7 +61,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/04.jpg"
+			"img": "assets/img/ecatalog/04.jpg"
 		},
 		{
 			"id": "321321325",
@@ -70,7 +70,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/05.jpg"
+			"img": "assets/img/ecatalog/05.jpg"
 		},
 		{
 			"id": "321321322",
@@ -79,7 +79,7 @@
 			"discount": "-30%",
 			"price": "2500",
 			"oldPrice": "3000",
-			"img": "btlassets/img/ecatalog/06.jpg"
+			"img": "assets/img/ecatalog/06.jpg"
 		}
 	],
 
@@ -91,7 +91,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/01.jpg"
+			"img": "assets/img/ecatalog/01.jpg"
 		},
 		{
 			"id": "321321322",
@@ -100,7 +100,7 @@
 			"discount": "-30%",
 			"price": "2500",
 			"oldPrice": "3000",
-			"img": "btlassets/img/ecatalog/02.jpg"
+			"img": "assets/img/ecatalog/02.jpg"
 		},
 		{
 			"id": "321321323",
@@ -109,7 +109,7 @@
 			"discount": "",
 			"price": "2500",
 			"oldPrice": "",
-			"img": "btlassets/img/ecatalog/03.jpg"
+			"img": "assets/img/ecatalog/03.jpg"
 		},
 		{
 			"id": "321321324",
@@ -118,7 +118,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/04.jpg"
+			"img": "assets/img/ecatalog/04.jpg"
 		},
 		{
 			"id": "321321325",
@@ -127,7 +127,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/05.jpg"
+			"img": "assets/img/ecatalog/05.jpg"
 		},
 		{
 			"id": "321321322",
@@ -136,7 +136,7 @@
 			"discount": "-30%",
 			"price": "2500",
 			"oldPrice": "3000",
-			"img": "btlassets/img/ecatalog/06.jpg"
+			"img": "assets/img/ecatalog/06.jpg"
 		},
 		{
 			"id": "321321323",
@@ -145,7 +145,7 @@
 			"discount": "",
 			"price": "2500",
 			"oldPrice": "",
-			"img": "btlassets/img/ecatalog/07.jpg"
+			"img": "assets/img/ecatalog/07.jpg"
 		},
 		{
 			"id": "321321324",
@@ -154,7 +154,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/08.jpg"
+			"img": "assets/img/ecatalog/08.jpg"
 		},
 		{
 			"id": "321321325",
@@ -163,7 +163,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/09.jpg"
+			"img": "assets/img/ecatalog/09.jpg"
 		},
 		{
 			"id": "321321323",
@@ -172,7 +172,7 @@
 			"discount": "",
 			"price": "2500",
 			"oldPrice": "",
-			"img": "btlassets/img/ecatalog/10.jpg"
+			"img": "assets/img/ecatalog/10.jpg"
 		},
 		{
 			"id": "321321324",
@@ -181,7 +181,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/11.jpg"
+			"img": "assets/img/ecatalog/11.jpg"
 		},
 		{
 			"id": "321321325",
@@ -190,7 +190,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/12.jpg"
+			"img": "assets/img/ecatalog/12.jpg"
 		}
 	],
 	"caroucel1": [
@@ -201,7 +201,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/01.jpg"
+			"img": "assets/img/ecatalog/01.jpg"
 		},
 		{
 			"id": "321321322",
@@ -210,7 +210,7 @@
 			"discount": "-30%",
 			"price": "2500",
 			"oldPrice": "3000",
-			"img": "btlassets/img/ecatalog/02.jpg"
+			"img": "assets/img/ecatalog/02.jpg"
 		},
 		{
 			"id": "321321323",
@@ -219,7 +219,7 @@
 			"discount": "",
 			"price": "2500",
 			"oldPrice": "",
-			"img": "btlassets/img/ecatalog/03.jpg"
+			"img": "assets/img/ecatalog/03.jpg"
 		},
 		{
 			"id": "321321324",
@@ -228,7 +228,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/04.jpg"
+			"img": "assets/img/ecatalog/04.jpg"
 		},
 		{
 			"id": "321321324",
@@ -237,7 +237,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/11.jpg"
+			"img": "assets/img/ecatalog/11.jpg"
 		},
 		{
 			"id": "321321325",
@@ -246,7 +246,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/12.jpg"
+			"img": "assets/img/ecatalog/12.jpg"
 		}
 	],
 	"caroucel2": [
@@ -257,7 +257,7 @@
 			"discount": "",
 			"price": "2500",
 			"oldPrice": "",
-			"img": "btlassets/img/ecatalog/10.jpg"
+			"img": "assets/img/ecatalog/10.jpg"
 		},
 		{
 			"id": "321321324",
@@ -266,7 +266,7 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/11.jpg"
+			"img": "assets/img/ecatalog/11.jpg"
 		},
 		{
 			"id": "321321325",
@@ -275,61 +275,61 @@
 			"discount": "-50%",
 			"price": "2500",
 			"oldPrice": "3500",
-			"img": "btlassets/img/ecatalog/12.jpg"
+			"img": "assets/img/ecatalog/12.jpg"
 		}
 	],
 	"newSlider": [
 		{
 			"id": "321321323",
 			"title": "Косметика для женщин",
-			"img": "btlassets/img/rubr/01.jpg"
+			"img": "assets/img/rubr/01.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для мужчин",
-			"img": "btlassets/img/rubr/02.jpg"
+			"img": "assets/img/rubr/02.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для ног",
-			"img": "btlassets/img/rubr/03.jpg"
+			"img": "assets/img/rubr/03.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для тела",
-			"img": "btlassets/img/rubr/04.jpg"
+			"img": "assets/img/rubr/04.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для ногтей",
-			"img": "btlassets/img/rubr/05.jpg"
+			"img": "assets/img/rubr/05.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для волос",
-			"img": "btlassets/img/rubr/06.jpg"
+			"img": "assets/img/rubr/06.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для женщин",
-			"img": "btlassets/img/rubr/01.jpg"
+			"img": "assets/img/rubr/01.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для мужчин",
-			"img": "btlassets/img/rubr/02.jpg"
+			"img": "assets/img/rubr/02.jpg"
 		},
 		{
 			"id": "321321323",
 			"title": "Косметика для ног",
-			"img": "btlassets/img/rubr/03.jpg"
+			"img": "assets/img/rubr/03.jpg"
 		}
 	],
 	"comments": [
 		{
 			"id": "321321321",
 			"Name": "Вероника Иванова",
-			"avatar": "btlassets/img/avatar/01.jpg",
+			"avatar": "assets/img/avatar/01.jpg",
 			"date": "04.08.2021",
 			"time": "12:00",
 			"text": "Очень помогла мне и моему ребёнку справиться без лекарств, без бесконечных походов по врачам, сдачи кучи анализов  и прочего.  Видит человека и его проблему. Уже не раз обращалась к ней, всегда внимательно выслушает, и назначит нужный препарат",
@@ -340,7 +340,7 @@
 		{
 			"id": "321321321",
 			"Name": "Анна Васильева",
-			"avatar": "btlassets/img/avatar/02.jpg",
+			"avatar": "assets/img/avatar/02.jpg",
 			"date": "04.08.2021",
 			"time": "12:00",
 			"text": "Огромное спасибо Вере Эдуардовне, у неё золотые руки!!!Всех благ и процветания Вам и Вашему Центру!!!",
@@ -351,7 +351,7 @@
 		{
 			"id": "321321321",
 			"Name": "Вероника Иванова",
-			"avatar": "btlassets/img/avatar/03.jpg",
+			"avatar": "assets/img/avatar/03.jpg",
 			"date": "04.08.2021",
 			"time": "12:00",
 			"text": "Очень помогла мне и моему ребёнку справиться без лекарств, без бесконечных походов по врачам, сдачи кучи анализов  и прочего.  Видит человека и его проблему. Уже не раз обращалась к ней, всегда внимательно выслушает, и назначит нужный препарат",
@@ -362,7 +362,7 @@
 		{
 			"id": "321321321",
 			"Name": "Анна Васильева",
-			"avatar": "btlassets/img/avatar/04.jpg",
+			"avatar": "assets/img/avatar/04.jpg",
 			"date": "04.08.2021",
 			"time": "12:00",
 			"text": "Огромное спасибо Вере Эдуардовне, у неё золотые руки!!!Всех благ и процветания Вам и Вашему Центру!!!",
@@ -373,7 +373,7 @@
 		{
 			"id": "321321321",
 			"Name": "Вероника Иванова",
-			"avatar": "btlassets/img/avatar/05.jpg",
+			"avatar": "assets/img/avatar/05.jpg",
 			"date": "04.08.2021",
 			"time": "12:00",
 			"text": "Очень помогла мне и моему ребёнку справиться без лекарств, без бесконечных походов по врачам, сдачи кучи анализов  и прочего.  Видит человека и его проблему. Уже не раз обращалась к ней, всегда внимательно выслушает, и назначит нужный препарат",
@@ -384,7 +384,7 @@
 		{
 			"id": "321321321",
 			"Name": "Анна Васильева",
-			"avatar": "btlassets/img/avatar/01.jpg",
+			"avatar": "assets/img/avatar/01.jpg",
 			"date": "04.08.2021",
 			"time": "12:00",
 			"text": "Огромное спасибо Вере Эдуардовне, у неё золотые руки!!!Всех благ и процветания Вам и Вашему Центру!!!",

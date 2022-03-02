@@ -6,68 +6,267 @@
 
 include __const
 include __header
-include __popUpBlocks
-include __mainTop
-include __card
-include __mainBox
-include __news
-include __actions
-include __eShopTovarPage
 include __forms
 include __footer
 
-include __old
-include __blocks
-include __comments
 
 
 <!DOCTYPE html>
 html(lang="ru-RU")
-+head
-body
-
-  .site__header
-    +header
-
-  .site__center.mainPageIdx
-    +mainTop
-    +newLinkInMainPage
-    .wideBlock__area.mainPopular.block_mbottom
-      .wideBlock.wsite
-        .xTitle 
-          h2 Популярные процедуры
-        +eCard_inMain
-    .wideBlock__area.block_mbottom
-      .wideBlock.wsite
-        +tovarSimilarCaroucel2022
-    
-    //- .wideBlock__area
-    //-   .wideBlock.wsite
-    //-     .title.title1 
-    //-       h2 Блог нашего центра
-    //- +blogSlider
-    .wideBlock__area.actions__wrapper.block_mbottom
-      .wideBlock.wsite
-        +actions
-    .wideBlock__area.block_mbottom
-      .wideBlock.wsite
-        +mainContent
-    +commentsCaroucel
-
-    +rubricators
-    
-    +mainForm_v3
-    //- .wsite
-    //-   .tour
-    //-     iframe(src="https://rec360.ru/tour/demotour.html", frameborder="0", width="100%" height="100%") 
-    
-
-  .site__footer
-    +footer3
-      
-
-
-  +popUpBlocks
-  +scripts
-
-    
+  head
+    +head
+  body
+    .site__header
+      .topLine__area
+        .topLine
+          .topInfo__area
+            .topInfo__item
+              i.fa.fa-car(aria-hidden='true')
+              span Выезд специалиста БЕСПЛАТНО!
+              // <i class="fa fa-map-signs" aria-hidden="true"></i>
+              // <span>г. Саратов, улица Слонова, дом 1, офис "Каркас64"</span>
+          .topLine__contArea
+            .topLine__cont
+              i.fa.fa-phone-square(aria-hidden='true')
+              a(href='tel:778801') 77-88-01
+            .topLine__cont
+              i.fa.fa-envelope(aria-hidden='true')
+              a(href='mailto:info@karkas64.ru') info@karkas64.ru
+            .topLine__cont.topLine__cont_btn.js_btnZ
+              i.fa.fa-volume-control-phone(aria-hidden='true')
+              span Заказать звонок
+      .header__area
+        header.header
+          .header__logo
+            a(href='#')
+              img(src='assets/img/logo1c.png' alt='Каркас64')
+          nav.topMenu__outer
+            .menuButton__outer
+              .menuButton
+                span
+                span
+                span
+            ul.topMenu
+              li.active
+                a(href='#') Главная
+              li
+                a(href='#') Услуги
+              li
+                a(href='#') Проекты
+              li
+                a(href='#') Портфолио
+              li
+                a(href='#') Статьи
+              li
+                a(href='#') Контакты
+    .site__center
+      .mainSlider
+        .swiper-container.swiper-container1
+          .swiper-wrapper
+            .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/slide1.jpg);')
+              .swiper__cadr
+                .swiper__inner1
+                  .swiper__title1
+                    | СТРОИТЕЛЬСТВО КАРКАСНЫХ ДОМОВ
+                  .swiper__text1
+                    | Строим каркасные дома в Саратове и Энгельсе по канадской и скандинавской технологии
+                  .swiper__link1
+                    a(href='#') Подробнее...
+            .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/slide2.jpg);')
+              .swiper__cadr
+                .swiper__inner1
+                  .swiper__title1
+                    | ВНУТРЕННЯЯ ОТДЕЛКА ДЕРЕВОМ
+                  .swiper__text1
+                    | Имитация бруса, блок-хаус, вагонка. Любые решения для создания уюта и тепла Вашего дома!
+                  .swiper__link1
+                    a(href='#') Подробнее...
+            .swiper-slide.swiper-slide1(style='background-image: url(assets/img/slider1/slide3.jpg);')
+              .swiper__cadr
+                .swiper__inner1
+                  .swiper__title1
+                    | Пристройки, веранды, террасы
+                  .swiper__text1
+                    | Открытые и закрытые, по каркасной технологии, быстро и качественно!
+                  .swiper__link1
+                    a(href='#') Подробнее...
+          .swiper-pagination.swiper-pagination1
+          .swiper-pagination.swiper-button-prev.swiper-button-prev1
+            i.fa.fa-angle-left(aria-hidden='true')
+          .swiper-pagination.swiper-button-next.swiper-button-next1
+            i.fa.fa-angle-right(aria-hidden='true')
+      .page__area
+        .page
+          .title1.title2_center
+            h1 Заголовок H1
+          .content
+            h2 Заголовок h2
+            h3 Заголовок h3
+            h4 Заголовок h4
+            h5 Заголовок h5
+            h6 Заголовок h6
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam at eaque eos error et laborum minus
+              | natus necessitatibus veniam voluptatem?
+            p
+              | Lorem ipsum dolor sit amet, 
+              a(href='/') consectetur adipisicing elit
+              | . Dolorem dolores magni odio
+              |               possimus, rem tempora!
+            img(src='assets/img/img1.jpg' alt='1' style='float: left; margin-right: 20px;')
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem eaque labore laboriosam libero minima
+              | nisi officiis recusandae tempora tenetur voluptatem? Accusamus, aliquid at culpa itaque labore libero
+              | nostrum quod repellendus.
+            p(align='center')
+              img(src='assets/img/img1.jpg' alt='2')
+            ul
+              li Lorem ipsum dolor.
+              li Lorem ipsum.
+              li
+                | Lorem ipsum 
+                strong dolor
+                |  sit amet.
+              li
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, ipsa. Lorem ipsum dolor sit amet,
+                | consectetur adipisicing elit. Corporis, ipsa. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                | Corporis, ipsa.
+              li Lorem.
+      .catalog__area
+        .catalog__outer
+          .title2.title2_center
+            h2 Наши услуги
+          .catalog
+            section.catalog__itemOuter
+              a.catalog__item(href='#')
+                .catalog__itemImg
+                  img(src='assets/img/catalog/01.jpg' alt='1')
+                .catalog__itemInfo
+                  span Строительство каркасных домов
+                  p по канадской и скандинавской технологии
+            section.catalog__itemOuter
+              a.catalog__item(href='#')
+                .catalog__itemImg
+                  img(src='assets/img/catalog/02.jpg' alt='2')
+                .catalog__itemInfo
+                  span Бани под ключ
+                  p С нуля до полной отделки
+            section.catalog__itemOuter
+              a.catalog__item(href='#')
+                .catalog__itemImg
+                  img(src='assets/img/catalog/03.jpg' alt='3')
+                .catalog__itemInfo
+                  span Пристройки
+                  p по канадской и скандинавской технологии
+            section.catalog__itemOuter
+              a.catalog__item(href='#')
+                .catalog__itemImg
+                  img(src='assets/img/catalog/04.jpg' alt='1')
+                .catalog__itemInfo
+                  span Террасы и веранды
+                  p открытого и закрытого исполнения
+      .gallery__area
+        .gallery__outer
+          .title2.title2_center
+            h2 Галерея H2
+          .gallery
+            .gallery__item
+              a(href='assets/img/catalog/01.jpg' data-fancybox='group' data-caption='002')
+                img(src='assets/img/catalog/01.jpg' alt='1')
+            .gallery__item
+              a(href='assets/img/catalog/02.jpg' data-fancybox='group' data-caption='002')
+                img(src='assets/img/catalog/02.jpg' alt='1')
+            .gallery__item
+              a(href='assets/img/catalog/03.jpg' data-fancybox='group' data-caption='002')
+                img(src='assets/img/catalog/03.jpg' alt='1')
+            .gallery__item
+              a(href='assets/img/catalog/04.jpg' data-fancybox='group' data-caption='002')
+                img(src='assets/img/catalog/04.jpg' alt='1')
+            .gallery__item
+              a(href='assets/img/catalog/05.jpg' data-fancybox='group' data-caption='002')
+                img(src='assets/img/catalog/05.jpg' alt='1')
+      .gallery__area
+        .gallery__outer
+          .title2.title2_center
+            h2 Видеогалерея H2
+          .videoBox__area
+            .videoBox__outer
+              .videoBox
+                a(data-fancybox='' href='https://www.youtube.com/watch?v=dl16e_mG6hg')
+                  img(src='https://img.youtube.com/vi/dl16e_mG6hg/sddefault.jpg' alt='')
+            .videoBox__outer
+              .videoBox
+                a(data-fancybox='' href='https://www.youtube.com/watch?v=P5csD0SX8jI')
+                  img(src='https://img.youtube.com/vi/P5csD0SX8jI/sddefault.jpg' alt='')
+      .ig__area
+        .ig__outer
+          .title2.title2_center
+            h2 Наш Instagram
+          .ig
+            #instafeed.instafeed
+      .dBox__area
+        .dBox
+          .dBox__left
+            .title2.title2_center
+              h3 Мы на карте
+            .map__area
+              #map
+          .dBox__right
+            .title2.title2_center
+              h3 Обратная связь
+            form.form1(action='#')
+              input.name1(name='name1' type='text' placeholder='Ваше имя')
+              input.phone1(name='phone1' type='text' placeholder='Ваш телефон')
+              input.email1(name='email1' type='text' placeholder='Ваш email')
+              input.work_email1(name='work_email1' type='text' placeholder='Рабочий email')
+              textarea.message1(name='message1' cols='30' rows='10' placeholder='Ваш вопрос:')
+              .form__policy
+                p
+                  | *Отправляя сообщение Вы соглашаетесь с условиями
+                  a(href='#' target='_blank') политики конфиденциальности
+              button.submit1(type='submit' name='submit1') Задать вопрос
+    .site__footer
+      .footer__area
+        footer.footer
+          .f1
+            span © Каркас64 2018
+            p *информация на сайте не является публичной офертой
+            a(href='#') Политика конфиденциальности
+          .f2
+            .like__area
+              .likeBlock
+                a.like_twitter(onclick='return share.twitter(share_url,share_title);' href='#')
+                  i.fa.fa-twitter(aria-hidden='true')
+                a.like_gp(onclick='return share.gp(share_url,share_title);' href='#')
+                  i.fa.fa-google-plus(aria-hidden='true')
+                a.like_vk(onclick='return share.vk(share_url,share_title,share_image,share_desc);' href='#')
+                  i.fa.fa-vk(aria-hidden='true')
+                a.like_ok(onclick='return share.ok(share_url,share_desc);' href='#')
+                  i.fa.fa-odnoklassniki(aria-hidden='true')
+                a.like_fb(onclick='return share.fb(share_url,share_title,share_image,share_desc);' href='#')
+                  i.fa.fa-facebook(aria-hidden='true')
+          .f3
+            p
+              | Разработка сайта: Веб-студия 
+              a(href='https://site-a.ru' target='_blank') «Сайт-А»
+            .siteCounter
+              img(src='assets/img/counter.jpg' alt='')
+    .toTop
+    .overlay
+    .js_containerZ.popupCallBack.animated
+      .formZ__area
+        .formClose
+          i.fa.fa-times(aria-hidden='true')
+        .formZ_title Оставьте Ваше имя и номер телефона и мы Вам перезвоним
+        form.formZ(method='post' action='#')
+          input.nameZ(name='nameZ' type='text' placeholder='Ваше имя')
+          input.phoneZ(name='phoneZ' type='text' placeholder='Укажите Ваш номер')
+          input.work_emailZ(name='work_emailZ' type='text' placeholder='Рабочий email')
+          .form__policy
+            p
+              | *Отправляя сообщение Вы соглашаетесь с условиями
+              a(href='#' target='_blank') политики конфиденциальности
+          button.submitZ(type='submit' name='submitZ')
+            | Заказать звонок
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+    +scripts
