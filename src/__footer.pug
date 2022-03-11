@@ -1,4 +1,31 @@
-
-
 mixin footer
-  .footer
+  .footer__area
+    footer.footer
+      .f1
+        span © Каркас64 2018
+        p *информация на сайте не является публичной офертой
+        a(href='#') Политика конфиденциальности
+      .f2
+        //.like__area
+          .likeBlock
+            a.like_twitter(onclick='return share.twitter(share_url,share_title);' href='#')
+              i.fa.fa-twitter(aria-hidden='true')
+            a.like_gp(onclick='return share.gp(share_url,share_title);' href='#')
+              i.fa.fa-google-plus(aria-hidden='true')
+            a.like_vk(onclick='return share.vk(share_url,share_title,share_image,share_desc);' href='#')
+              i.fa.fa-vk(aria-hidden='true')
+            a.like_ok(onclick='return share.ok(share_url,share_desc);' href='#')
+              i.fa.fa-odnoklassniki(aria-hidden='true')
+            a.like_fb(onclick='return share.fb(share_url,share_title,share_image,share_desc);' href='#')
+              i.fa.fa-facebook(aria-hidden='true')
+        .footefLink__area
+          a.footefLink(href="") Строительство каркасных домов
+          a.footefLink(href="") Строительство пристройки к дому по каркасной технологии
+          a.footefLink(href="") Бани под ключ
+          a.footefLink(href="") Террасы и веранды
+      .f3
+        p
+          | Разработка сайта: Веб-студия 
+          a(href='https://site-a.ru' target='_blank') «Сайт-А»
+        .siteCounter
+          img(src='assets/img/counter.jpg' alt='')
