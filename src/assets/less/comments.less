@@ -1,0 +1,397 @@
+.commentsCaroucel__area {
+	width: 100%;
+	background: rgba(252, 188, 4, 0.2);
+	border-bottom: 3px solid #fcbc04;
+}
+
+.commentsCaroucel__outer {
+	padding: 40px 0;
+	.at-max(414px, {
+    padding: 20px 0;
+  });
+}
+
+.commentsCaroucel {
+	width: 100%;
+	padding: 0;
+	position: relative;
+	/* margin: 0 -10px; */
+}
+
+.commentsCaroucel-container {
+	position: relative;
+	margin: 0 -15px;
+	.at-max(1200px, {
+    // padding: 0 0 32px;
+    margin: 0 -15px 0;
+  });
+	.at-max(768px, {
+    margin: 0 -10px 0;
+  });
+	.at-max(414px, {
+    margin: 0 -8px 0;
+  });
+}
+
+.commentsCaroucel-wrapper {
+	// align-items: stretch;
+	/*  padding: 0 0 10px 0;*/
+}
+.commentsCaroucel-slide {
+	height: auto;
+	display: flex;
+}
+
+.commentsCaroucel__left,
+.commentsCaroucel__right {
+	position: absolute;
+	// background: rgba(71, 7, 0, 0.2);
+	background: #fcbc04;
+	background: rgba(252, 188, 4, 0.5);
+	width: 42px;
+	height: 42px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	top: 50%;
+	margin-top: -21px;
+	font-size: 30px;
+	z-index: 1;
+}
+
+// .commentsCaroucel:hover .commentsCaroucel__left,
+// .commentsCaroucel:hover .commentsCaroucel__right {
+// 	background: #e7e4f4;
+// }
+
+.commentsCaroucel:hover .commentsCaroucel__left i,
+.commentsCaroucel:hover .commentsCaroucel__right i {
+	opacity: 1;
+	color: #5d4b62;
+}
+
+.commentsCaroucel__left:hover,
+.commentsCaroucel__right:hover {
+	background: #470700 !important;
+}
+
+.commentsCaroucel__left:hover i,
+.commentsCaroucel__right:hover i {
+	opacity: 1;
+	color: #fff !important;
+}
+
+.commentsCaroucel__left:focus,
+.commentsCaroucel__right:focus {
+	border: none;
+	outline: none;
+}
+
+.commentsCaroucel__left.disabled,
+.commentsCaroucel__right.disabled {
+	display: none;
+}
+
+.commentsCaroucel__left {
+	left: -25px;
+}
+
+.commentsCaroucel__right {
+	right: -25px;
+}
+
+.commentsCaroucel__left i,
+.commentsCaroucel__right i {
+	font-size: 1.5rem;
+	color: #470700;
+	transition: all 0.3s;
+	// opacity: 0.2;
+}
+
+.commentsCaroucel__left:hover i,
+.commentsCaroucel__right:hover i {
+	color: #fff;
+}
+
+/* .swiper-button-disabled,
+.swiper-button-disabled:hover {
+  background: #fff;
+}
+.swiper-button-disabled i {
+  color: #ddd;
+}
+.swiper-button-disabled:hover i {
+  color: #ddd;
+}
+
+.swiper-button-lock {
+  display: none;
+} */
+
+.commentsCaroucel__pagination {
+	/* display: flex;
+  align-items: center;
+  justify-content: center; */
+	height: 12px;
+	width: 100%;
+	display: none;
+}
+
+.commentsCaroucel__pagination .swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	background: #cecbda;
+	opacity: 1;
+	margin: 0 4px;
+}
+
+.commentsCaroucel__pagination .swiper-pagination-bullet-active {
+	background: #5d4b62;
+	opacity: 1;
+}
+
+.commentsCard__outer {
+	display: flex;
+	padding: 0 15px 10px;
+	// height: 100%;
+	.at-max(768px, {
+    padding: 0 10px 10px;
+  });
+	.at-max(414px, {
+    padding: 0 8px 10px;
+  });
+}
+
+.commentsCard {
+	display: flex;
+	position: relative;
+	padding: 20px 30px;
+	background: #ffffff;
+	// border: 2px solid #fcbc04;
+	border-radius: 6px;
+	// height: 100%;
+	.at-max(1200px, {
+    padding: 20px;
+  });
+}
+
+.commentsCard__inner {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.commentsCard__top {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+	.at-max(768px, {
+    margin-bottom: 10px;
+  });
+}
+
+.commentsCard__img {
+	width: 52px;
+	height: 52px;
+	border-radius: 50%;
+	overflow: hidden;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	flex-shrink: 0;
+}
+
+.commentsCard__info {
+	// padding: 0 0 0 20px;
+	display: flex;
+	flex-direction: column;
+	// min-height: 70px;
+}
+
+.commentsCard__name {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.02em;
+	color: #4f4f4f;
+	margin-bottom: 4px;
+	min-height: 22px;
+}
+.commentsCard__date {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+	color: #bdbdbd;
+}
+
+.commentsCard__textArea {
+	padding: 0 0 20px 0;
+	min-height: 210px;
+	// border-bottom: 1px solid #e0e0e0;
+	.at-max(1080px, {
+    min-height: 230px;
+  });
+	.at-max(768px, {
+    min-height: 180px;
+    padding: 0 0 10px 0;
+  });
+	.at-max(600px, {
+    min-height: 165px;
+  });
+	.at-max(480px, {
+    min-height: 170px;
+  });
+	.at-max(380px, {
+    min-height: 190px;
+  });
+	.at-max(360px, {
+    min-height: 130px;
+  });
+	.at-max(320px, {
+    min-height: 150px;
+  });
+}
+
+.commentsCard__text {
+	width: 100%;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #4f4f4f;
+	/* height: 230px; */
+	.at-max(768px, {
+    font-size: 14px;
+  });
+}
+
+.commentsCard__textAll {
+	width: 100%;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 24px;
+	color: #4f4f4f;
+	display: none;
+	/* height: 230px; */
+	.at-max(768px, {
+    font-size: 14px;
+  });
+}
+
+.commentsCard__more {
+	font-weight: 700;
+	font-style: italic;
+	cursor: pointer;
+	margin-top: 20px;
+	.at-max(768px, {
+    margin-top: 10px;
+    font-size: 14px;
+  });
+}
+
+.commentsCard__doktor {
+	// margin-top: auto;
+	display: flex;
+	padding: 20px 0 0 0;
+	// min-height: 90px;
+	.at-max(768px, {
+    padding: 10px 0 0 0;
+  });
+}
+
+.commentsCard__doktor_bt {
+	padding: 65px 0 0 0;
+}
+
+.commentsCard__doktorAvatar {
+	// width: 52px;
+	// height: 52px;
+	width: 25%;
+}
+.commentsCard__doktorAvatar img {
+	display: block;
+	width: 100%;
+	border-radius: 50%;
+}
+
+.commentsCard__doktorInfo {
+	display: flex;
+	flex-direction: column;
+	padding: 0 0 0 20px;
+	// flex: 1;
+	width: 75%;
+}
+
+.commentsCard__doktorName,
+a.commentsCard__doktorName {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	letter-spacing: 0.02em;
+	color: #4f4f4f;
+	margin-bottom: 4px;
+	transition: all 0.3s;
+	// min-height: 66px;
+	&:hover {
+		color: var(--red1);
+	}
+	.at-max(768px, {
+    font-size: 16px;
+	line-height: 20px;
+  });
+}
+
+.commentsCard__doctorPosition {
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+	color: #bdbdbd;
+	// margin-top: auto;
+	// min-height: 60px;
+	display: flex;
+	align-items: flex-end;
+}
+
+.commentsCard__doctorPosition_mt0 {
+	margin-top: 0;
+}
+
+.reviewSource__outer {
+	min-height: 60px;
+	padding: 20px 0 0 0;
+	.at-max(768px, {
+    padding: 10px 0 0 0;
+  });
+	.at-max(360px, {
+    min-height: 48px;
+  });
+}
+
+.reviewSource {
+	display: flex;
+	align-items: center;
+}
+
+.reviewSource img {
+	width: 24px;
+	margin: 0 16px 0 0;
+}
+
+.reviewSource span {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+	text-decoration-line: underline;
+	color: #d74d63;
+}

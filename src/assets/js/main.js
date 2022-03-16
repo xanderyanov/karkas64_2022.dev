@@ -83,6 +83,111 @@ $(function () {
 	// 	const swiper1 = new Swiper(".swiper-container1", swiperOptions);
 	// }
 
+	if ($(".animCount__outer").length) {
+		// Однократная анимация цифр при прокрутке страницы
+		var showAnimateCounter = true;
+		function numAnimate() {
+			$(".animCount__numberOn").each(function () {
+				$(this)
+					.prop("Counter", 0)
+					.animate(
+						{
+							Counter: $(this).text(),
+						},
+						{
+							duration: 2000,
+							easing: "swing",
+							step: function (now) {
+								$(this).text(Math.ceil(now));
+							},
+						}
+					);
+			});
+			showAnimateCounter = false;
+		}
+
+		$(window).on("scroll", function () {
+			if (!showAnimateCounter) return false;
+			var scrTop = $(window).scrollTop();
+			if (scrTop > $(".animCount").offset().top - $(window).height()) {
+				numAnimate();
+			}
+		});
+	}
+
+	var commentsOptions = {};
+	if ($(".commentsCaroucel-container .commentsCaroucel-slide").length) {
+		commentsOptions = {
+			slidesPerView: 4,
+			loop: false,
+			spaceBetween: 0,
+			// centeredSlides: true,
+			speed: 600,
+			autoplay: {
+				delay: 15000,
+				disableOnInteraction: true,
+			},
+			navigation: {
+				nextEl: ".commentsCaroucel__right",
+				prevEl: ".commentsCaroucel__left",
+			},
+			keyboard: true,
+			watchOverflow: true,
+			pagination: {
+				el: ".commentsCaroucel__pagination",
+				type: "bullets",
+				dynamicBullets: true,
+				clickable: true,
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1,
+					spaceBetween: 0,
+				},
+				360: {
+					slidesPerView: 1.5,
+					spaceBetween: 0,
+				},
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+				},
+				600: {
+					slidesPerView: 2.5,
+					spaceBetween: 0,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 0,
+				},
+				920: {
+					slidesPerView: 3.5,
+					spaceBetween: 0,
+				},
+				1080: {
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
+			},
+		};
+	}
+	var swiper = new Swiper(".commentsCaroucel-container", commentsOptions);
+
+	$(".commentsCard__more").on("click", function () {
+		var Parent = $(this).closest(".commentsCard__textArea");
+		var AllText = Parent.find(".commentsCard__textAll");
+		var ShortText = Parent.find(".commentsCard__text");
+		if ($(this).hasClass("open")) {
+			$(this).removeClass("open").text("Читать весь отзыв");
+			AllText.slideUp();
+			ShortText.slideDown();
+		} else {
+			$(this).addClass("open").text("Свернуть");
+			AllText.slideDown();
+			ShortText.slideUp();
+		}
+	});
+
 	$(".menuButton").on("click", function () {
 		$(this).toggleClass("open");
 		$(".topMenu").slideToggle();
