@@ -126,24 +126,23 @@ mixin mainProjects
     .mainProjects__outer
       .title3.tac
         h2=mainProjectsTitle
-        
       .mainProjects 
         .mainProject__outer 
-          .mainProject
+          a.mainProject(href="") 
             .mainProject__img(style="background-image: url(assets/img/prj/p1.jpg)")
             .mainProject__info 
               .mainProject__title Двухэтажный каркасный дом
               .mainProject__desc Общая площадь: 84 м2
               .mainProject__price Цена от 800 тыс.руб.
         .mainProject__outer 
-          .mainProject
+          a.mainProject(href="") 
             .mainProject__img(style="background-image: url(assets/img/prj/p2.jpg)")
             .mainProject__info 
               .mainProject__title Двухэтажный каркасный дом
               .mainProject__desc Общая площадь: 84 м2
               .mainProject__price Цена от 800 тыс.руб.
         .mainProject__outer 
-          .mainProject
+          a.mainProject(href="") 
             .mainProject__img(style="background-image: url(assets/img/prj/p3.jpg)")
             .mainProject__info 
               .mainProject__title Двухэтажный каркасный дом
@@ -163,7 +162,8 @@ mixin mainContacts
     .mainContacts__outer.wsite
       .mainContacts
         .mainContacts__left
-          h3 Наш адрес в Саратове
+          .title3.tac
+            h3 Наш адрес в Саратове
           .content
             p 413000, г. Саратов, улица Слонова, дом 1 
             p <i>офис "Каркас64"</i>
@@ -172,7 +172,8 @@ mixin mainContacts
             #map
       .mainContacts
         .mainContacts__left
-          h3 Наш адрес в Энгельсе
+          .title3.tac
+            h3 Наш адрес в Энгельсе
           .content
             p 413100, г. Энгельс, улица Мельничная,
             p <i>ГСК Волжский. Строение 222</i>
@@ -195,6 +196,24 @@ mixin oldContacts
           input.name1(name='name1' type='text' placeholder='Ваше имя')
           input.phone1(name='phone1' type='text' placeholder='Ваш телефон')
           input.email1(name='email1' type='text' placeholder='Ваш email')
+          input.work_email1(name='work_email1' type='text' placeholder='Рабочий email')
+          textarea.message1(name='message1' cols='30' rows='10' placeholder='Ваш вопрос:')
+          .form__policy
+            p
+              | *Отправляя сообщение Вы соглашаетесь с условиями
+              a(href='#' target='_blank') политики конфиденциальности
+          button.submit1(type='submit' name='submit1') Задать вопрос
+
+mixin wideForm 
+  .wideForm__area 
+    .wideForm__outer.wsite 
+      .wideForm
+        .title3.tac
+          h3 Обратная связь
+        form.form1(action='#')
+          input.name1.name1w(name='name1' type='text' placeholder='Ваше имя')
+          input.phone1.phone1w(name='phone1' type='text' placeholder='Ваш телефон')
+          input.email1.email1w(name='email1' type='text' placeholder='Ваш email')
           input.work_email1(name='work_email1' type='text' placeholder='Рабочий email')
           textarea.message1(name='message1' cols='30' rows='10' placeholder='Ваш вопрос:')
           .form__policy
