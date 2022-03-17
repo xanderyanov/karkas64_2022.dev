@@ -3,6 +3,7 @@
 - var seoDesc = 'Сео описание для страницы'
 - var sliderTitle1 = 'Популярные товары'
 - var commentsTitle = 'Отзывы'
+- var mainProjectsTitle = 'Наши проекты'
 
 include __const
 include __header
@@ -59,6 +60,10 @@ html(lang="ru-RU")
                   span Террасы и веранды
                   p открытого и закрытого исполнения
       +animCount
+
+      +mainProjects
+
+      +basePrice
       
       .gallery__area
         .gallery__outer
@@ -73,27 +78,9 @@ html(lang="ru-RU")
 
       +about
       +commentsCaroucel
-      .dBox__area
-        .dBox
-          .dBox__left
-            .title2.title2_center
-              h3 Мы на карте
-            .map__area
-              #map
-          .dBox__right
-            .title2.title2_center
-              h3 Обратная связь
-            form.form1(action='#')
-              input.name1(name='name1' type='text' placeholder='Ваше имя')
-              input.phone1(name='phone1' type='text' placeholder='Ваш телефон')
-              input.email1(name='email1' type='text' placeholder='Ваш email')
-              input.work_email1(name='work_email1' type='text' placeholder='Рабочий email')
-              textarea.message1(name='message1' cols='30' rows='10' placeholder='Ваш вопрос:')
-              .form__policy
-                p
-                  | *Отправляя сообщение Вы соглашаетесь с условиями
-                  a(href='#' target='_blank') политики конфиденциальности
-              button.submit1(type='submit' name='submit1') Задать вопрос
+
+      +mainContacts
+      
     .site__footer
       +footer
     .toTop

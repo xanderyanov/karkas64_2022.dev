@@ -86,7 +86,7 @@ mixin about
 mixin commentsCaroucel
   .commentsCaroucel__area
     .commentsCaroucel__outer.wsite
-      .title2.title2_center
+      .title3.tac
         h2=commentsTitle
       .commentsCaroucel
         .swiper-container.commentsCaroucel-container
@@ -97,7 +97,7 @@ mixin commentsCaroucel
                   .commentsCard 
                     .commentsCard__inner
                       .commentsCard__top 
-                        .commentsCard__img(style='background-image: url(' + item.avatar + ');') 
+                        //-.commentsCard__img(style='background-image: url(' + item.avatar + ');') 
                         .commentsCard__info 
                           .commentsCard__name!= item.Name
                           .commentsCard__date
@@ -118,3 +118,87 @@ mixin commentsCaroucel
         .commentsCaroucel__right
           i.fa.fa-angle-right
         .swiper-pagination.commentsCaroucel__pagination
+      .redmore__area 
+        a.redmore(href="#") Смотреть ещё отзывы 
+
+mixin mainProjects 
+  .mainProjects__area 
+    .mainProjects__outer
+      .title3.tac
+        h2=mainProjectsTitle
+        
+      .mainProjects 
+        .mainProject__outer 
+          .mainProject
+            .mainProject__img(style="background-image: url(assets/img/prj/p1.jpg)")
+            .mainProject__info 
+              .mainProject__title Двухэтажный каркасный дом
+              .mainProject__desc Общая площадь: 84 м2
+              .mainProject__price Цена от 800 тыс.руб.
+        .mainProject__outer 
+          .mainProject
+            .mainProject__img(style="background-image: url(assets/img/prj/p2.jpg)")
+            .mainProject__info 
+              .mainProject__title Двухэтажный каркасный дом
+              .mainProject__desc Общая площадь: 84 м2
+              .mainProject__price Цена от 800 тыс.руб.
+        .mainProject__outer 
+          .mainProject
+            .mainProject__img(style="background-image: url(assets/img/prj/p3.jpg)")
+            .mainProject__info 
+              .mainProject__title Двухэтажный каркасный дом
+              .mainProject__desc Общая площадь: 84 м2
+              .mainProject__price Цена от 800 тыс.руб.
+      .redmore__area 
+        a.redmore(href="#") Смотреть ещё проекты 
+
+mixin basePrice 
+  .basePrice__area 
+    .basePrice__outer 
+      .pasePrice В базовой комплектации стоимость 1 м<sup>2</sup> по полу: из OSB от 12 000 рублей.<br>из ЦСП от 14 000 рублей С ГОРАНТИЕЙ 20 ЛЕТ НА КАРКАС
+
+
+mixin mainContacts 
+  .mainContacts__area
+    .mainContacts__outer.wsite
+      .mainContacts
+        .mainContacts__left
+          h3 Наш адрес в Саратове
+          .content
+            p 413000, г. Саратов, улица Слонова, дом 1 
+            p <i>офис "Каркас64"</i>
+        .mainContacts__right
+          .map__area.map__area1
+            #map
+      .mainContacts
+        .mainContacts__left
+          h3 Наш адрес в Энгельсе
+          .content
+            p 413100, г. Энгельс, улица Мельничная,
+            p <i>ГСК Волжский. Строение 222</i>
+        .mainContacts__right
+          .map__area.map__area2
+            #map2
+
+mixin oldContacts
+  .dBox__area
+    .dBox
+      .dBox__left
+        .title2.title2_center
+          h3 Мы на карте
+        .map__area
+          #map
+      .dBox__right
+        .title2.title2_center
+          h3 Обратная связь
+        form.form1(action='#')
+          input.name1(name='name1' type='text' placeholder='Ваше имя')
+          input.phone1(name='phone1' type='text' placeholder='Ваш телефон')
+          input.email1(name='email1' type='text' placeholder='Ваш email')
+          input.work_email1(name='work_email1' type='text' placeholder='Рабочий email')
+          textarea.message1(name='message1' cols='30' rows='10' placeholder='Ваш вопрос:')
+          .form__policy
+            p
+              | *Отправляя сообщение Вы соглашаетесь с условиями
+              a(href='#' target='_blank') политики конфиденциальности
+          button.submit1(type='submit' name='submit1') Задать вопрос

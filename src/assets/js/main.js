@@ -153,18 +153,10 @@ $(function () {
 					spaceBetween: 0,
 				},
 				600: {
-					slidesPerView: 2.5,
-					spaceBetween: 0,
-				},
-				768: {
 					slidesPerView: 3,
 					spaceBetween: 0,
 				},
 				920: {
-					slidesPerView: 3.5,
-					spaceBetween: 0,
-				},
-				1080: {
 					slidesPerView: 4,
 					spaceBetween: 0,
 				},
@@ -435,82 +427,6 @@ $(function () {
 
 //################ likeBlock
 
-var share_url = "http://karkas64.ru/";
-var share_title = "Строительство каркасных домов";
-var share_desc = "Главная";
-var share_image = "";
-var share_text = "Главная";
-var share_popup_width = 650;
-var share_popup_height = 450;
-
-// var share_links_container = document.getElementById('my_share');
-
-var share_links_container = $(".likeBlock");
-
-if (share_links_container != "NULL") {
-	if (typeof share_popup_width != "number" || typeof share_popup_height != "number") {
-		share_popup_width = 626;
-		share_popup_height = 436;
-	}
-
-	share = {
-		twitter: function (purl, ptitle) {
-			url = "http://twitter.com/share?";
-			url += "text=" + encodeURIComponent(ptitle);
-			url += "&url=" + encodeURIComponent(purl);
-			url += "&counturl=" + encodeURIComponent(purl);
-			share.popup(url);
-			return false;
-		},
-		gp: function (purl, ptitle, pimg, text) {
-			url = "https://plus.google.com/share?";
-			url += "url=" + encodeURIComponent(purl);
-			share.popup(url);
-			return false;
-		},
-		mail: function (purl, ptitle, pimg, text) {
-			url = "http://connect.mail.ru/share?";
-			url += "url=" + encodeURIComponent(purl);
-			url += "&title=" + encodeURIComponent(ptitle);
-			url += "&description=" + encodeURIComponent(text);
-			url += "&imageurl=" + encodeURIComponent(pimg);
-			share.popup(url);
-			return false;
-		},
-		vk: function (purl, ptitle, pimg, text) {
-			url = "http://vkontakte.ru/share.php?";
-			url += "url=" + encodeURIComponent(purl);
-			url += "&title=" + encodeURIComponent(ptitle);
-			url += "&description=" + encodeURIComponent(text);
-			url += "&image=" + encodeURIComponent(pimg);
-			url += "&noparse=true";
-			share.popup(url);
-			return false;
-		},
-		ok: function (purl, text) {
-			url = "http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1";
-			url += "&st.comments=" + encodeURIComponent(text);
-			url += "&st._surl=" + encodeURIComponent(purl);
-			share.popup(url);
-			return false;
-		},
-		fb: function (purl, ptitle, pimg, text) {
-			url = "http://www.facebook.com/sharer.php?s=100";
-			url += "&p[title]=" + encodeURIComponent(ptitle);
-			url += "&p[summary]=" + encodeURIComponent(text);
-			url += "&p[url]=" + encodeURIComponent(purl);
-			url += "&p[images][0]=" + encodeURIComponent(pimg);
-			share.popup(url);
-			return false;
-		},
-
-		popup: function (url, width, height) {
-			window.open(url, "", "toolbar=0,status=0,width=" + share_popup_width + ",height=" + share_popup_height);
-			return false;
-		},
-	};
-}
-
 var isMobile = {
 	Android: function () {
 		return navigator.userAgent.match(/Android/i);
@@ -533,12 +449,76 @@ var isMobile = {
 };
 
 if ($(".map__area").length) {
-	ymaps.ready(init);
+	ymaps.ready(init1);
 
-	function init() {
+	function init1() {
 		var myMap = new ymaps.Map("map", {
-			center: [51.515778710103916, 46.07611271107453],
-			zoom: 11,
+			center: [51.53278464377675, 46.00511899140164],
+			zoom: 17,
+			controls: ["zoomControl"],
+		});
+
+		myMap.behaviors.disable("scrollZoom");
+		if (isMobile.any()) {
+			myMap.behaviors.disable("drag");
+		}
+
+		var myGeoObjects = [];
+
+		myGeoObjects[0] = new ymaps.Placemark(
+			[51.53278464377675, 46.00511899140164],
+			{
+				// Зададим содержимое заголовка балуна.
+				balloonContentHeader:
+					'<div class="baloon__top">Каркас 64</div>' + '<div class="baloon__description">каркасное строительство</div>',
+				// Зададим содержимое основной части балуна.
+				balloonContentBody:
+					'<div class="baloon__content"><img src="assets/img/logo1c.png" height="83" width="150">' +
+					'<a href="tel:778801">77-88-01</a>',
+				// Зададим содержимое нижней части балуна.
+				balloonContentFooter: '<div class="baloon__footer">Саратов, улица Слонова, 1</div>',
+				clusterCaption: "Каркас64",
+				// Зададим содержимое всплывающей подсказки.
+				hintContent: '<div class="baloon__top">Мы в Саратове</div>',
+			},
+			{
+				iconLayout: "default#image",
+				iconImageHref: "assets/img/marker.svg",
+				iconImageSize: [31, 50],
+				iconImageOffset: [-15, -50],
+			}
+		);
+		var clusterIcons = [
+			{
+				href: "/images/pointer.png",
+				size: [31, 40],
+				offset: [0, 0],
+			},
+		];
+
+		var clusterer = new ymaps.Clusterer({
+			clusterDisableClickZoom: false,
+			clusterOpenBalloonOnClick: false,
+			clusterBalloonContentLayout: "cluster#balloonCarousel",
+			clusterBalloonPanelMaxMapArea: 0,
+			clusterBalloonContentLayoutWidth: 300,
+			clusterBalloonContentLayoutHeight: 200,
+			clusterBalloonPagerSize: 5,
+			clusterBalloonPagerType: "marker",
+		});
+
+		clusterer.add(myGeoObjects);
+		myMap.geoObjects.add(clusterer);
+	}
+}
+
+if ($(".map__area").length) {
+	ymaps.ready(init2);
+
+	function init2() {
+		var myMap = new ymaps.Map("map2", {
+			center: [51.467929973539924, 46.101787816399735],
+			zoom: 16,
 			controls: ["zoomControl"],
 		});
 
@@ -567,45 +547,12 @@ if ($(".map__area").length) {
 				hintContent: '<div class="baloon__top">Мы в Энгельсе</div>',
 			},
 			{
-				// Необходимо указать данный тип макета.
 				iconLayout: "default#image",
-				//iconImageHref: 'assets/img/mapmarker2.png',
-				// Размеры метки.
-				//iconImageSize: [30, 45],
-				// Смещение левого верхнего угла иконки относительно
-				// её «ножки» (точки привязки).
-				//iconImageOffset: [-20, -47]
+				iconImageHref: "assets/img/marker.svg",
+				iconImageSize: [31, 50],
+				iconImageOffset: [-15, -50],
 			}
 		);
-
-		myGeoObjects[1] = new ymaps.Placemark(
-			[51.53278464377675, 46.00511899140164],
-			{
-				// Зададим содержимое заголовка балуна.
-				balloonContentHeader:
-					'<div class="baloon__top">Каркас 64</div>' + '<div class="baloon__description">каркасное строительство</div>',
-				// Зададим содержимое основной части балуна.
-				balloonContentBody:
-					'<div class="baloon__content"><img src="assets/img/logo1c.png" height="83" width="150">' +
-					'<a href="tel:778801">77-88-01</a>',
-				// Зададим содержимое нижней части балуна.
-				balloonContentFooter: '<div class="baloon__footer">Саратов, улица Слонова, 1</div>',
-				clusterCaption: "Каркас64",
-				// Зададим содержимое всплывающей подсказки.
-				hintContent: '<div class="baloon__top">Мы в Саратове</div>',
-			},
-			{
-				// Необходимо указать данный тип макета.
-				iconLayout: "default#image",
-				//iconImageHref: 'assets/img/mapmarker2.png',
-				// Размеры метки.
-				//iconImageSize: [30, 45],
-				// Смещение левого верхнего угла иконки относительно
-				// её «ножки» (точки привязки).
-				//iconImageOffset: [-20, -47]
-			}
-		);
-
 		var clusterIcons = [
 			{
 				href: "/images/pointer.png",
@@ -617,25 +564,12 @@ if ($(".map__area").length) {
 		var clusterer = new ymaps.Clusterer({
 			clusterDisableClickZoom: false,
 			clusterOpenBalloonOnClick: false,
-			// Устанавливаем стандартный макет балуна кластера "Карусель".
 			clusterBalloonContentLayout: "cluster#balloonCarousel",
-			// Устанавливаем собственный макет.
-			//clusterBalloonItemContentLayout: customItemContentLayout,
-			// Устанавливаем режим открытия балуна.
-			// В данном примере балун никогда не будет открываться в режиме панели.
 			clusterBalloonPanelMaxMapArea: 0,
-			// Устанавливаем размеры макета контента балуна (в пикселях).
 			clusterBalloonContentLayoutWidth: 300,
 			clusterBalloonContentLayoutHeight: 200,
-			// Устанавливаем максимальное количество элементов в нижней панели на одной странице
 			clusterBalloonPagerSize: 5,
-			// Настройка внешего вида нижней панели.
-			// Режим marker рекомендуется использовать с небольшим количеством элементов.
 			clusterBalloonPagerType: "marker",
-			// Можно отключить зацикливание списка при навигации при помощи боковых стрелок.
-			// clusterBalloonCycling: false,
-			// Можно отключить отображение меню навигации.
-			// clusterBalloonPagerVisible: false
 		});
 
 		clusterer.add(myGeoObjects);
