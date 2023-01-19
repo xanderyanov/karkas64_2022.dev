@@ -1,5 +1,3 @@
-let $window = $(window);
-
 function siteResizeFunction() {
 	prevWindowWidth = windowWidth;
 	windowWidth = $window.width();

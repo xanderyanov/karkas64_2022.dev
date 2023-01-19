@@ -1,0 +1,52 @@
+- var pageTitle = 'Барн-Хаусы'
+- var seoKeywords = 'Ключевые слова для страницы'
+- var seoDesc = 'Сео описание для страницы'
+- var sliderTitle1 = 'Популярные товары'
+- var commentsTitle = 'Отзывы'
+- var mainProjectsTitle = 'Наши проекты'
+
+include __const
+include __header
+include __sliders
+include __gallery
+include __forms
+include __footer
+
+include __index
+
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
+  head
+    +head
+  body
+    .site__header
+      +header
+    .site__center
+      .bh__first
+
+    .site__footer
+      +footer
+    .toTop
+    .overlay
+    .js_containerZ.popupCallBack.animated
+      .formZ__area
+        .formClose
+          i.fa.fa-times(aria-hidden='true')
+        .formZ_title Оставьте Ваше имя и номер телефона и мы Вам перезвоним
+        form.formZ(method='post' action='#')
+          input.nameZ(name='nameZ' type='text' placeholder='Ваше имя')
+          input.phoneZ(name='phoneZ' type='text' placeholder='Укажите Ваш номер')
+          input.work_emailZ(name='work_emailZ' type='text' placeholder='Рабочий email')
+          .form__policy
+            p
+              | *Отправляя сообщение Вы соглашаетесь с условиями
+              a(href='#' target='_blank') политики конфиденциальности
+          button.submitZ(type='submit' name='submitZ')
+            | Заказать звонок
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+    +scripts
+
+
+

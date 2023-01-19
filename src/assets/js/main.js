@@ -1,3 +1,4 @@
+
 Fancybox.bind('[data-fancybox="gallery"]', {
 	closeBtn: false,
 	arrows: true,
