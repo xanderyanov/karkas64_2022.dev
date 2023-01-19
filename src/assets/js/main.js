@@ -1,22 +1,21 @@
-
-Fancybox.bind('[data-fancybox="gallery"]', {
-	closeBtn: false,
-	arrows: true,
-	keyboard: true,
-	nextClick: true,
-	infobar: true,
-	protect: true,
-	nextEffect: "elastic",
-	prevEffect: "elastic",
-	padding: 0,
-	loop: true,
-	animationEffect: "zoom-in-out",
-	transitionEffect: "slide",
-	touch: {
-		vertical: true, // Allow to drag content vertically
-		momentum: true, // Continue movement after releasing mouse/touch when panning
-	},
-});
+// Fancybox.bind('[data-fancybox="gallery"]', {
+// 	closeBtn: false,
+// 	arrows: true,
+// 	keyboard: true,
+// 	nextClick: true,
+// 	infobar: true,
+// 	protect: true,
+// 	nextEffect: "elastic",
+// 	prevEffect: "elastic",
+// 	padding: 0,
+// 	loop: true,
+// 	animationEffect: "zoom-in-out",
+// 	transitionEffect: "slide",
+// 	touch: {
+// 		vertical: true, // Allow to drag content vertically
+// 		momentum: true, // Continue movement after releasing mouse/touch when panning
+// 	},
+// });
 
 const swiperOptions = {
 	paginationClickable: true,
@@ -87,22 +86,20 @@ $(function () {
 	if ($(".animCount__outer").length) {
 		// Однократная анимация цифр при прокрутке страницы
 		var showAnimateCounter = true;
+
 		function numAnimate() {
 			$(".animCount__numberOn").each(function () {
 				$(this)
 					.prop("Counter", 0)
-					.animate(
-						{
-							Counter: $(this).text(),
+					.animate({
+						Counter: $(this).text(),
+					}, {
+						duration: 2000,
+						easing: "swing",
+						step: function (now) {
+							$(this).text(Math.ceil(now));
 						},
-						{
-							duration: 2000,
-							easing: "swing",
-							step: function (now) {
-								$(this).text(Math.ceil(now));
-							},
-						}
-					);
+					});
 			});
 			showAnimateCounter = false;
 		}
@@ -201,7 +198,9 @@ $(function () {
 		}
 	});
 	$(".toTop").click(function () {
-		$("body,html").animate({ scrollTop: 0 }, 400);
+		$("body,html").animate({
+			scrollTop: 0
+		}, 400);
 		return false;
 	});
 
@@ -214,7 +213,12 @@ $(function () {
 		var message = $(".message1").val();
 		var r = /^[\w\.\d-_]+@[\w\.\d-_]+\.\w{2,4}$/i;
 		if (name == "") {
-			swal({ title: "Поле Имя пустое", text: "Заполните поле имя", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Поле Имя пустое",
+				text: "Заполните поле имя",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 			$(".name1").addClass("error");
 			setTimeout(function () {
 				$(".name1").removeClass("error");
@@ -231,13 +235,23 @@ $(function () {
 				$(".phone1").removeClass("error");
 			}, 3000);
 		} else if (email == "") {
-			swal({ title: "Ошибка Email", text: "Заполните поле Email", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Ошибка Email",
+				text: "Заполните поле Email",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 			$(".email1").addClass("error");
 			setTimeout(function () {
 				$(".email1").removeClass("error");
 			}, 3000);
 		} else if (!r.test(email)) {
-			swal({ title: "Ошибка", text: "Корректно заполните поле e-mail", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Ошибка",
+				text: "Корректно заполните поле e-mail",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 			$(".email1").addClass("error");
 			setTimeout(function () {
 				$(".email1").removeClass("error");
@@ -254,18 +268,27 @@ $(function () {
 				$(".message1").removeClass("error");
 			}, 3000);
 		} else if (workemail != "") {
-			swal({ title: "Ах ты жулик", text: "Уберите робота от компьютера", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Ах ты жулик",
+				text: "Уберите робота от компьютера",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 		} else {
 			$.post(
-				"mail.php",
-				{
+				"mail.php", {
 					name: name,
 					phone: phone,
 					email: email,
 					message: message,
 				},
 				function () {
-					swal({ title: "Спасибо", text: "Ваше сообщение отправлено", type: "success", confirmButtonText: "ок" });
+					swal({
+						title: "Спасибо",
+						text: "Ваше сообщение отправлено",
+						type: "success",
+						confirmButtonText: "ок"
+					});
 					$(".name1").val("").removeClass("error");
 					$(".phone1").val("").removeClass("error");
 					$(".email1").val("").removeClass("error");
@@ -309,7 +332,12 @@ $(function () {
 		var phone = $(".phoneZ").val();
 		var workemail = $(".work_emailZ").val();
 		if (name == "") {
-			swal({ title: "Поле Имя пустое", text: "Заполните поле имя", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Поле Имя пустое",
+				text: "Заполните поле имя",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 			$(".nameZ").addClass("nameZ");
 			setTimeout(function () {
 				$(".nameZ").removeClass("error");
@@ -326,16 +354,25 @@ $(function () {
 				$(".phoneZ").removeClass("error");
 			}, 3000);
 		} else if (workemail != "") {
-			swal({ title: "Ах ты жулик", text: "Уберите робота от компьютера", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Ах ты жулик",
+				text: "Уберите робота от компьютера",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 		} else {
 			$.post(
-				"mail.php",
-				{
+				"mail.php", {
 					name: name,
 					phone: phone,
 				},
 				function () {
-					swal({ title: "Спасибо", text: "Ваше сообщение отправлено", type: "success", confirmButtonText: "ок" });
+					swal({
+						title: "Спасибо",
+						text: "Ваше сообщение отправлено",
+						type: "success",
+						confirmButtonText: "ок"
+					});
 					$(".nameZ").val("").removeClass("error");
 					$(".phoneZ").val("").removeClass("error");
 					$(".js_btn1").removeClass("js-Active");
@@ -387,7 +424,12 @@ $(function () {
 		var message = $(".message2").text();
 		var workemail = $(".work_email2").val();
 		if (name == "") {
-			swal({ title: "Поле Имя пустое", text: "Заполните поле имя", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Поле Имя пустое",
+				text: "Заполните поле имя",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 			$(".name2").addClass("error");
 			setTimeout(function () {
 				$(".name2").removeClass("error");
@@ -404,17 +446,26 @@ $(function () {
 				$(".phone2").removeClass("error");
 			}, 3000);
 		} else if (workemail != "") {
-			swal({ title: "Ах ты жулик", text: "Уберите робота от компьютера", type: "error", confirmButtonText: "ок" });
+			swal({
+				title: "Ах ты жулик",
+				text: "Уберите робота от компьютера",
+				type: "error",
+				confirmButtonText: "ок"
+			});
 		} else {
 			$.post(
-				"mail.php",
-				{
+				"mail.php", {
 					name: name,
 					phone: phone,
 					message: message,
 				},
 				function () {
-					swal({ title: "Спасибо", text: "Ваше сообщение отправлено", type: "success", confirmButtonText: "ок" });
+					swal({
+						title: "Спасибо",
+						text: "Ваше сообщение отправлено",
+						type: "success",
+						confirmButtonText: "ок"
+					});
 					$(".name2").val("").removeClass("error");
 					$(".phone2").val("").removeClass("error");
 					$(".directPrice").removeClass("js-Active");
@@ -467,35 +518,29 @@ if ($(".map__area").length) {
 		var myGeoObjects = [];
 
 		myGeoObjects[0] = new ymaps.Placemark(
-			[51.53278464377675, 46.00511899140164],
-			{
+			[51.53278464377675, 46.00511899140164], {
 				// Зададим содержимое заголовка балуна.
-				balloonContentHeader:
-					'<div class="baloon__top">Каркас 64</div>' + '<div class="baloon__description">каркасное строительство</div>',
+				balloonContentHeader: '<div class="baloon__top">Каркас 64</div>' + '<div class="baloon__description">каркасное строительство</div>',
 				// Зададим содержимое основной части балуна.
-				balloonContentBody:
-					'<div class="baloon__content"><img src="assets/img/logo1c.png" height="83" width="150">' +
+				balloonContentBody: '<div class="baloon__content"><img src="assets/img/logo1c.png" height="83" width="150">' +
 					'<a href="tel:778801">77-88-01</a>',
 				// Зададим содержимое нижней части балуна.
 				balloonContentFooter: '<div class="baloon__footer">Саратов, улица Слонова, 1</div>',
 				clusterCaption: "Каркас64",
 				// Зададим содержимое всплывающей подсказки.
 				hintContent: '<div class="baloon__top">Мы в Саратове</div>',
-			},
-			{
+			}, {
 				iconLayout: "default#image",
 				iconImageHref: "assets/img/marker.svg",
 				iconImageSize: [31, 50],
 				iconImageOffset: [-15, -50],
 			}
 		);
-		var clusterIcons = [
-			{
-				href: "/images/pointer.png",
-				size: [31, 40],
-				offset: [0, 0],
-			},
-		];
+		var clusterIcons = [{
+			href: "/images/pointer.png",
+			size: [31, 40],
+			offset: [0, 0],
+		}, ];
 
 		var clusterer = new ymaps.Clusterer({
 			clusterDisableClickZoom: false,
@@ -531,36 +576,29 @@ if ($(".map__area").length) {
 		var myGeoObjects = [];
 
 		myGeoObjects[0] = new ymaps.Placemark(
-			[51.467929973539924, 46.101787816399735],
-			{
+			[51.467929973539924, 46.101787816399735], {
 				// Зададим содержимое заголовка балуна.
-				balloonContentHeader:
-					'<div class="baloon__top">Каркас 64</div>' + '<div class="baloon__description">каркасное строительство</div>',
+				balloonContentHeader: '<div class="baloon__top">Каркас 64</div>' + '<div class="baloon__description">каркасное строительство</div>',
 				// Зададим содержимое основной части балуна.
-				balloonContentBody:
-					'<div class="baloon__content"><img src="assets/img/logo1c.png" height="83" width="150">' +
+				balloonContentBody: '<div class="baloon__content"><img src="assets/img/logo1c.png" height="83" width="150">' +
 					'<a href="tel:778801">77-88-01</a>',
 				// Зададим содержимое нижней части балуна.
-				balloonContentFooter:
-					'<div class="baloon__footer">Энгельс, улица Мельничная, <br>ГСК Волжский. Строение 222</div>',
+				balloonContentFooter: '<div class="baloon__footer">Энгельс, улица Мельничная, <br>ГСК Волжский. Строение 222</div>',
 				clusterCaption: "Каркас64",
 				// Зададим содержимое всплывающей подсказки.
 				hintContent: '<div class="baloon__top">Мы в Энгельсе</div>',
-			},
-			{
+			}, {
 				iconLayout: "default#image",
 				iconImageHref: "assets/img/marker.svg",
 				iconImageSize: [31, 50],
 				iconImageOffset: [-15, -50],
 			}
 		);
-		var clusterIcons = [
-			{
-				href: "/images/pointer.png",
-				size: [31, 40],
-				offset: [0, 0],
-			},
-		];
+		var clusterIcons = [{
+			href: "/images/pointer.png",
+			size: [31, 40],
+			offset: [0, 0],
+		}, ];
 
 		var clusterer = new ymaps.Clusterer({
 			clusterDisableClickZoom: false,

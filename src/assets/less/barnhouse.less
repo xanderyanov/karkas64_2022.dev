@@ -1,1 +1,52 @@
-.bh__first{}
+.bh__first{
+    background: #eee;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+}
+
+.bh__first:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(0, 0, 0, 0.3);
+    background: url(../img/pattern2.png) rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.bh__firstInner{
+    height: 100%;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.bh__firstInnerLeft{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 50%;
+}
+
+.bh__firstInnerLeft h1{
+    color: #fff;
+
+    font-size: 40px;
+}
+
+.bh__firstInnerRight{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 50%;
+    color: #fff;
+}

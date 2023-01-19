@@ -4,10 +4,10 @@ mixin head
     title= pageTitle
     meta(name='keywords' content='[[*seokeywords]]')
     meta(name='description' content='[[*seodescription]]')
+
     meta(name='HandheldFriendly' content='True')
     meta(name='MobileOptimized' content='320')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-    //- meta(name="viewport" content="width=1280")
     meta(http-equiv='X-UA-Compatible' content='IE=edge')
     meta(name='imagetoolbar' content='no')
     meta(name='msthemecompatible' content='no')
@@ -15,24 +15,12 @@ mixin head
     meta(name='format-detection' content='address=no')
     meta(name='theme-color' content='#ffffff')
     meta(name='apple-mobile-web-app-capable' content='yes')
-    
-    link(rel='apple-touch-icon' sizes='57x57' href='assets/img/apple/apple-icon-57x57.png')
-    link(rel='apple-touch-icon' sizes='60x60' href='assets/img/apple/apple-icon-60x60.png')
-    link(rel='apple-touch-icon' sizes='72x72' href='assets/img/apple/apple-icon-72x72.png')
-    link(rel='apple-touch-icon' sizes='76x76' href='assets/img/apple/apple-icon-76x76.png')
-    link(rel='apple-touch-icon' sizes='114x114' href='assets/img/apple/apple-icon-114x114.png')
-    link(rel='apple-touch-icon' sizes='120x120' href='assets/img/apple/apple-icon-120x120.png')
-    link(rel='apple-touch-icon' sizes='144x144' href='assets/img/apple/apple-icon-144x144.png')
-    link(rel='apple-touch-icon' sizes='152x152' href='assets/img/apple/apple-icon-152x152.png')
-    link(rel='apple-touch-icon' sizes='180x180' href='assets/img/apple/apple-icon-180x180.png')
-    link(rel='icon' type='image/png' sizes='192x192' href='assets/img/apple/android-icon-192x192.png')
-    link(rel='icon' type='image/png' sizes='32x32' href='assets/img/apple/favicon-32x32.png')
-    link(rel='icon' type='image/png' sizes='96x96' href='assets/img/apple/favicon-96x96.png')
-    link(rel='icon' type='image/png' sizes='16x16' href='assets/img/apple/favicon-16x16.png')
-    link(rel='manifest' href='assets/img/apple/manifest.json')
-    meta(name='msapplication-TileColor' content='#ffffff')
-    meta(name='msapplication-TileImage' content='assets/img/apple/ms-icon-144x144.png')
-    meta(name='theme-color' content='#ffffff')
+    meta(name='apple-mobile-web-app-status-bar-style' content='black-translucent')
+    link(rel='apple-touch-icon-precomposed' href='assets/img/apple/h/apple-touch-icon.png')
+    link(rel='apple-touch-icon-precomposed' href='assets/img/apple/m/apple-touch-icon.png')
+    link(rel='apple-touch-icon-precomposed' href='assets/img/apple/l/apple-touch-icon-precomposed.png')
+    link(rel='shortcut icon' href='assets/img/apple/l/apple-touch-icon.png')
+    link(rel='shortcut icon' href='assets/img/favicon.ico')
 
     meta(property='og:url' content='[[*template:in=`1`:then=`[[~[[*id]]]]`:else=`[[++site_url]][[~[[*id]]]]`]]')
     meta(property='og:type' content='website')
@@ -170,7 +158,7 @@ mixin textInContent
               td Строка 3 столбец 3
       +gallery
       +videogallery
-      
+
 
 mixin videogallery
   .innerBox
@@ -179,12 +167,12 @@ mixin videogallery
     .videoBox__area
       .videoBox__outer
         .videoBox
-          a(data-fancybox='', href='https://www.youtube.com/watch?v=dl16e_mG6hg')
-            img(src='https://img.youtube.com/vi/dl16e_mG6hg/sddefault.jpg', alt='')
+          a(data-fancybox='' href='https://www.youtube.com/watch?v=dl16e_mG6hg')
+            img(src='https://img.youtube.com/vi/dl16e_mG6hg/sddefault.jpg' alt='')
       .videoBox__outer
         .videoBox
-          a(data-fancybox='', href='https://www.youtube.com/watch?v=P5csD0SX8jI')
-            img(src='https://img.youtube.com/vi/P5csD0SX8jI/sddefault.jpg', alt='')
+          a(data-fancybox='' href='https://www.youtube.com/watch?v=P5csD0SX8jI')
+            img(src='https://img.youtube.com/vi/P5csD0SX8jI/sddefault.jpg' alt='')
 
 mixin gallery
   .innerBox
@@ -192,23 +180,23 @@ mixin gallery
       h2 Галерея H2
     .gallery
       .gallery__item
-        a(href='assets/img/gal/06.jpg', data-fancybox='group', data-caption='002')
-          img(src='assets/img/gal/06.jpg', alt='1')
+        a(href='assets/img/gal/06.jpg' data-fancybox='group' data-caption='002')
+          img(src='assets/img/gal/06.jpg' alt='1')
       .gallery__item
-        a(href='assets/img/gal/02.jpg', data-fancybox='group', data-caption='002')
-          img(src='assets/img/gal/02.jpg', alt='1')
+        a(href='assets/img/gal/02.jpg' data-fancybox='group' data-caption='002')
+          img(src='assets/img/gal/02.jpg' alt='1')
       .gallery__item
-        a(href='assets/img/gal/03.jpg', data-fancybox='group', data-caption='002')
-          img(src='assets/img/gal/03.jpg', alt='1')
+        a(href='assets/img/gal/03.jpg' data-fancybox='group' data-caption='002')
+          img(src='assets/img/gal/03.jpg' alt='1')
       .gallery__item
-        a(href='assets/img/gal/04.jpg', data-fancybox='group', data-caption='002')
-          img(src='assets/img/gal/04.jpg', alt='1')
+        a(href='assets/img/gal/04.jpg' data-fancybox='group' data-caption='002')
+          img(src='assets/img/gal/04.jpg' alt='1')
       .gallery__item
-        a(href='assets/img/gal/05.jpg', data-fancybox='group', data-caption='002')
-          img(src='assets/img/gal/05.jpg', alt='1')
+        a(href='assets/img/gal/05.jpg' data-fancybox='group' data-caption='002')
+          img(src='assets/img/gal/05.jpg' alt='1')
       .gallery__item
-        a(href='assets/img/gal/04.jpg', data-fancybox='group', data-caption='002')
-          img(src='assets/img/gal/04.jpg', alt='1')
+        a(href='assets/img/gal/04.jpg' data-fancybox='group' data-caption='002')
+          img(src='assets/img/gal/04.jpg' alt='1')
 
 mixin search1
   .search1__overlay
@@ -218,8 +206,8 @@ mixin search1
         i.icon-close2021
       .search1__outer
         .search1__box
-          form.search1(action='#', method='get')
-            input.search1__input(type='text', name='', value='', placeholder='Поиск по сайту...')
+          form.search1(action='#' method='get')
+            input.search1__input(type='text' name='' value='' placeholder='Поиск по сайту...')
             button.search1__btn(type='submit')
               i.icon-search2
 
@@ -229,7 +217,7 @@ mixin search2
       i.icon-close2021
     .search1__outer
       .search1__box
-        form.search1(action='#', method='get')
-          input.search1__input(type='text', name='', value='', placeholder='Поиск по сайту...')
+        form.search1(action='#' method='get')
+          input.search1__input(type='text' name='' value='' placeholder='Поиск по сайту...')
           button.search1__btn(type='submit')
             i.icon-search2

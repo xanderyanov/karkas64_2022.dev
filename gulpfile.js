@@ -50,23 +50,27 @@ gulp.task("assets", function () {
 });
 
 var vendorsCssFiles = [
-	"node_modules/sweetalert/dist/sweetalert.css",
-	"node_modules/swiper/css/swiper.min.css",
-	"node_modules/@fancyapps/ui/dist/fancybox.css",
-	"node_modules/bootstrap/dist/css/bootstrap.min.css",
-	"src/assets/libs/bootstrap-icons.css",
+	'node_modules/normalize.css/normalize.css',
+	'node_modules/sweetalert/dist/sweetalert.css',
+	'node_modules/swiper/css/swiper.min.css',
+	'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+	'node_modules/bootstrap/dist/css/bootstrap.min.css',
+	'node_modules/bootstrap-icons/font/bootstrap-icons.css',
+	//'src/assets/libs/bootstrap-icons.css',
 ];
 
 gulp.task("vendorsCss", function () {
 	return (
 		gulp
-			.src(vendorsCssFiles, { base: "assets/css" })
-			// .pipe(rigger()) //Прогоним через rigger
+		.src(vendorsCssFiles, {
+			base: "assets/css"
+		})
+		// .pipe(rigger()) //Прогоним через rigger
 
-			.pipe(sourcemaps.init()) //Инициализируем sourcemap
-			.pipe(concatCss("vendors.css"))
-			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest("build/assets/css"))
+		.pipe(sourcemaps.init()) //Инициализируем sourcemap
+		.pipe(concatCss("vendors.css"))
+		.pipe(sourcemaps.write("."))
+		.pipe(gulp.dest("build/assets/css"))
 	);
 });
 
@@ -77,24 +81,24 @@ gulp.task("bsIcons", function () {
 gulp.task("image", function () {
 	return (
 		gulp
-			.src("src/assets/img/**/*.*") //Выберем наши картинки
-			// .pipe(
-			// 	imagemin({
-			// 		//Сожмем их
-			// 		progressive: true,
-			// 		svgoPlugins: [{ removeViewBox: false }],
-			// 		use: [pngquant()],
-			// 		// interlaced: true,
-			// 	})
-			// )
-			.pipe(gulp.dest("build/assets/img"))
+		.src("src/assets/img/**/*.*") //Выберем наши картинки
+		// .pipe(
+		// 	imagemin({
+		// 		//Сожмем их
+		// 		progressive: true,
+		// 		svgoPlugins: [{ removeViewBox: false }],
+		// 		use: [pngquant()],
+		// 		// interlaced: true,
+		// 	})
+		// )
+		.pipe(gulp.dest("build/assets/img"))
 	);
 });
 
 var vendorsJsFiles = [
 	"node_modules/jquery/dist/jquery.min.js",
 	"node_modules/bootstrap/dist/js/bootstrap.min.js",
-	"node_modules/@fancyapps/ui/dist/fancybox.umd.js",
+	"node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js",
 	"node_modules/jquery.maskedinput/src/jquery.maskedinput.js",
 	"node_modules/sweetalert/dist/sweetalert.min.js",
 	"node_modules/swiper/js/swiper.min.js",
@@ -103,34 +107,39 @@ var vendorsJsFiles = [
 gulp.task("vendorsJs", function () {
 	return (
 		gulp
-			.src(vendorsJsFiles, { base: "assets/js" })
-			// .pipe(rigger()) //Прогоним через rigger
-			.pipe(plumber())
-			.pipe(sourcemaps.init()) //Инициализируем sourcemap
-			.pipe(concat("vendors.js"))
-			.pipe(uglify()) //Сожмем наш js
-			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest("build/assets/js"))
+		.src(vendorsJsFiles, {
+			base: "assets/js"
+		})
+		// .pipe(rigger()) //Прогоним через rigger
+		.pipe(plumber())
+		.pipe(sourcemaps.init()) //Инициализируем sourcemap
+		.pipe(concat("vendors.js"))
+		.pipe(uglify()) //Сожмем наш js
+		.pipe(sourcemaps.write("."))
+		.pipe(gulp.dest("build/assets/js"))
 	);
 });
 
 var myjsfiles = [
 	'src/assets/js/var.js',
-	'src/assets/js/main.js', 
+	'src/assets/js/main.js',
+	'src/assets/js/barnhouse.js',
 	'src/assets/js/start.js',
 	'src/assets/js/__resize.js'
-  ];
+];
 
 gulp.task("myJs", function () {
 	return (
 		gulp
-			.src(myjsfiles, { base: "assets/js" })
-			.pipe(plumber())
-			.pipe(sourcemaps.init()) //Инициализируем sourcemap
-			.pipe(concat("app.js")) // в какой файл объединить
-			// .pipe(uglify()) //Сожмем наш js
-			.pipe(sourcemaps.write("."))
-			.pipe(gulp.dest("build/assets/js"))
+		.src(myjsfiles, {
+			base: "assets/js"
+		})
+		.pipe(plumber())
+		.pipe(sourcemaps.init()) //Инициализируем sourcemap
+		.pipe(concat("app.js")) // в какой файл объединить
+		// .pipe(uglify()) //Сожмем наш js
+		.pipe(sourcemaps.write("."))
+		.pipe(gulp.dest("build/assets/js"))
 	);
 });
 
