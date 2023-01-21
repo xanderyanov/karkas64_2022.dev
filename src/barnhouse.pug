@@ -22,15 +22,27 @@ html(lang="ru-RU")
     +head
   body
     .site__header
-      +header
     .site__center
+      .fly__header
+        +header
       .bh__first(style="background-image: url(assets/img/bh/02.jpg)")
         .bh__firstInner 
           .bh__firstInnerLeft 
-            h1 Барн-Хаусы под ключ в Саратове
+            h1 
+              span Барн-Хаусы 
+              span под ключ в Саратове
           .bh__firstInnerRight 
-            span от 400 тыс
-
+            span от 400 тыс. рублей
+      .bhBlock__area 
+        .bhBlock
+          .bhBlock__title 
+            h2 Что такое БАРН-ХАУС?
+          .bhBlock__desc
+            .content_xxl 
+              p Барнхаус — это современный архитектурный стиль, применяемый в основном в малоэтажном строительстве.
+              p В переводе с английского "barn" озгначает «сарай» или «амбар». Дома в стиле барнхаус по своей форме на самом деле напоминают хозяйственные постройки. Они позиционируются, как эдакий деревенский лофт.
+              p Появившиеся в начале XX века, такие дома-барнхаусы по-прежнему популярны, в первую очередь благодаря своей простоте, экономичности, экологичности и скорости возведения.
+          .bhBlock__content
 
     .site__footer
       +footer
