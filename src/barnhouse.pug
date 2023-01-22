@@ -13,6 +13,7 @@ include __forms
 include __footer
 
 include __index
+include __projects
 
 
 
@@ -34,7 +35,7 @@ html(lang="ru-RU")
           .bh__firstInnerRight 
             span от 400 тыс. рублей
       .bhBlock__area 
-        .bhBlock
+        .bhBlock.bhBlock_py
           .bhBlock__title 
             h2 Что такое БАРН-ХАУС?
           .bhBlock__desc
@@ -43,6 +44,24 @@ html(lang="ru-RU")
               p В переводе с английского "barn" озгначает «сарай» или «амбар». Дома в стиле барнхаус по своей форме на самом деле напоминают хозяйственные постройки. Они позиционируются, как эдакий деревенский лофт.
               p Появившиеся в начале XX века, такие дома-барнхаусы по-прежнему популярны, в первую очередь благодаря своей простоте, экономичности, экологичности и скорости возведения.
           .bhBlock__content
+      .bhBlock__area 
+        .bhBlock
+          .swiper-container.bh__container
+            .swiper-wrapper.bh__wrapper
+              .swiper-slide.bh__slide
+                .bh__slideInner
+                  img(src="assets/img/bh/slide1.jpg" alt="")
+              .swiper-slide.bh__slide
+                .bh__slideInner
+                  img(src="assets/img/bh/slide2.jpg" alt="")
+              .swiper-slide.bh__slide
+                .bh__slideInner
+                  img(src="assets/img/bh/slide3.jpg" alt="")
+            .bh__left
+              i.fa.fa-angle-left
+            .bh__right
+              i.fa.fa-angle-right
+      +projects
 
     .site__footer
       +footer
