@@ -67,12 +67,17 @@ h6 {
 .content_xxl p,
 .content_xxl ul,
 .content_xxl ol,
+.content_xxl li,
 .content_xxl blockquote,
 .content_xxl table,
 .content_xxl ol li:before {
   font-size: 18px;
   line-height: 1.5;
   margin: 0 0 15px 0;
+}
+
+.content_xxl ul li {
+  list-style-image: url(../img/ulbg.png);
 }
 
 .content p:last-child,
@@ -95,8 +100,22 @@ h6 {
   /*padding: 0 0 0 10px;*/
 }
 
-.content ul li {
-  /*list-style-image: url(../img/ulbg.png);*/
+.content_xxl ul li {
+  list-style: none;
+  padding-left: 30px;
+  position: relative;
+}
+
+.content_xxl ul li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #470700;
+  border-radius: 50%;
 }
 
 .content blockquote,
@@ -185,6 +204,7 @@ sup {
   vertical-align: super;
   font-size: smaller;
 }
+
 sub {
   vertical-align: text-bottom;
   font-size: smaller;
