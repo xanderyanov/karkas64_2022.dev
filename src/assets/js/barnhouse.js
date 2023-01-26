@@ -6,9 +6,9 @@ function barnFirstScreen() {
 }
 
 $(function () {
-  var bhOptions = {};
-  if ($('.bh__container .bh__slide').length) {
-    bhOptions = {
+  var bhOptions1 = {};
+  if ($('.bh__container1 .bh__slide1').length) {
+    bhOptions1 = {
       slidesPerView: 1,
       loop: true,
       spaceBetween: 0,
@@ -19,12 +19,54 @@ $(function () {
         disableOnInteraction: true,
       },
       navigation: {
-        nextEl: '.bh__right',
-        prevEl: '.bh__left',
+        nextEl: '.bh__right1',
+        prevEl: '.bh__left1',
       },
       keyboard: true,
       watchOverflow: true,
     };
   }
-  var swiper = new Swiper('.bh__container', bhOptions);
+  var swiper = new Swiper('.bh__container1', bhOptions1);
+
+  var bhOptions2 = {};
+  if ($('.bh__container2 .bh__slide2').length) {
+    bhOptions2 = {
+      slidesPerView: 3,
+      loop: false,
+      spaceBetween: 0,
+      // centeredSlides: true,
+      speed: 600,
+      autoplay: {
+        delay: 15000,
+        disableOnInteraction: true,
+      },
+      navigation: {
+        nextEl: '.bh__right2',
+        prevEl: '.bh__left2',
+      },
+      pagination: {
+        el: '.swiper-pagination2',
+        type: 'bullets',
+        dynamicBullets: true,
+        clickable: true,
+      },
+      keyboard: true,
+      watchOverflow: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        400: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        600: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+    };
+  }
+  var swiper = new Swiper('.bh__container2', bhOptions2);
 });
