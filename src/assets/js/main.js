@@ -1,69 +1,26 @@
-// Fancybox.bind('[data-fancybox="gallery"]', {
-// 	closeBtn: false,
-// 	arrows: true,
-// 	keyboard: true,
-// 	nextClick: true,
-// 	infobar: true,
-// 	protect: true,
-// 	nextEffect: "elastic",
-// 	prevEffect: "elastic",
-// 	padding: 0,
-// 	loop: true,
-// 	animationEffect: "zoom-in-out",
-// 	transitionEffect: "slide",
-// 	touch: {
-// 		vertical: true, // Allow to drag content vertically
-// 		momentum: true, // Continue movement after releasing mouse/touch when panning
-// 	},
-// });
+var $window;
+var prevWindowWidth = 0;
+var windowWidth;
 
-const swiperOptions = {
-  paginationClickable: true,
-  autoplay: 7500,
-  spaceBetween: 0,
-  loop: true,
-  effect: 'slide',
-  loop: true,
-  // pagination: {
-  //   el: '.swiper-pagination1',
-  // },
-  pagination: {
-    el: '.swiper-pagination1',
-    type: 'bullets',
-    dynamicBullets: true,
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next1',
-    prevEl: '.swiper-button-prev1',
-  },
-  on: {
-    activeIndexChange: function () {
-      console.log('activeIndexChange');
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+//in selector we set style, for example
+//height: calc(var(--vh, 1vh) * 100); for 100vh
 
-      $('.swiper-slide')
-        .children('.swiper__cadr')
-        .removeClass('animationBaretsky1')
-        .fadeOut(500);
+function initVars() {
+  $window = $(window);
+  windowWidth = $window.width();
+  windowHeight = $window.height();
 
-      setTimeout(function () {
-        $('.swiper-slide-active')
-          .children('.swiper__cadr')
-          .fadeIn(500)
-          .addClass('animated')
-          .addClass('animationBaretsky1');
-      }, 500);
-    },
-  },
-};
-
-const swiper1 = new Swiper('.swiper-container1', swiperOptions);
-
-swiper1.on('beforeSlideChangeStart', function () {
-  console.log('beforeSlideChangeStart');
-});
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
 $(function () {
+  initVars();
+
   if ($('.functionHeight').length) {
     var windowH = $(window).height();
     console.log('windowH ' + windowH);
@@ -87,6 +44,74 @@ $(function () {
       console.log(newCenterH);
     }
   }
+
+  barnFirstScreen();
+
+  $('a[data-fancybox]').fancybox({
+    closeBtn: false,
+    backFocus: false,
+    arrows: true,
+    keyboard: true,
+    nextClick: true,
+    infobar: true,
+    protect: true,
+    nextEffect: 'elastic',
+    prevEffect: 'elastic',
+    padding: 0,
+    loop: true,
+    animationEffect: 'zoom-in-out',
+    transitionEffect: 'slide',
+    touch: {
+      vertical: true, // Allow to drag content vertically
+      momentum: true, // Continue movement after releasing mouse/touch when panning
+    },
+  });
+
+  const swiperOptions = {
+    paginationClickable: true,
+    autoplay: 7500,
+    spaceBetween: 0,
+    loop: true,
+    effect: 'slide',
+    loop: true,
+    // pagination: {
+    //   el: '.swiper-pagination1',
+    // },
+    pagination: {
+      el: '.swiper-pagination1',
+      type: 'bullets',
+      dynamicBullets: true,
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next1',
+      prevEl: '.swiper-button-prev1',
+    },
+    on: {
+      activeIndexChange: function () {
+        console.log('activeIndexChange');
+
+        $('.swiper-slide')
+          .children('.swiper__cadr')
+          .removeClass('animationBaretsky1')
+          .fadeOut(500);
+
+        setTimeout(function () {
+          $('.swiper-slide-active')
+            .children('.swiper__cadr')
+            .fadeIn(500)
+            .addClass('animated')
+            .addClass('animationBaretsky1');
+        }, 500);
+      },
+    },
+  };
+
+  const swiper1 = new Swiper('.swiper-container1', swiperOptions);
+
+  swiper1.on('beforeSlideChangeStart', function () {
+    console.log('beforeSlideChangeStart');
+  });
 
   // if ($(".swiper-container1").length) {
   // 	const swiper1 = new Swiper(".swiper-container1", swiperOptions);
@@ -515,6 +540,114 @@ $(function () {
           $('.phone2').val('').removeClass('error');
           $('.directPrice').removeClass('js-Active');
           $('.js_container2')
+            .addClass('bounceOutUp')
+            .removeClass('bounceInDown')
+            .fadeOut(600);
+          $('.overlay').fadeOut(200);
+        }
+      );
+    }
+  });
+
+  $('.directPriceBH').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var self = $(this);
+    var selfParent = $(this).parent();
+    var formDirectTitle = selfParent.children('.offer__title').text();
+    $('.form3__title span').text(formDirectTitle);
+    $('.form3 textarea').text(formDirectTitle);
+
+    if (self.hasClass('js_active')) {
+      self.removeClass('js_active');
+      $('.js_container3')
+        .addClass('bounceOutUp')
+        .removeClass('bounceInDown')
+        .fadeOut(600);
+      $('.overlay').fadeOut(200);
+    } else {
+      self.addClass('js_active');
+      $('.js_container3')
+        .removeClass('bounceOutUp')
+        .addClass('bounceInDown')
+        .fadeIn(200);
+      $('.overlay').fadeIn(200);
+    }
+  });
+  $('.overlay').on('click', function (e) {
+    e.preventDefault();
+    $('.js_container3')
+      .addClass('bounceOutUp')
+      .removeClass('bounceInDown')
+      .fadeOut(600);
+    $('.directPrice').removeClass('js_active');
+
+    $('.overlay').fadeOut(600);
+  });
+  $('.js_close').on('click', function (e) {
+    e.preventDefault();
+    $('.js_container3')
+      .addClass('bounceOutUp')
+      .removeClass('bounceInDown')
+      .fadeOut(600);
+    $('.directPrice').removeClass('js_active');
+
+    $('.overlay').fadeOut(600);
+  });
+  $('.form3').on('click', '.submit3', function (e) {
+    e.preventDefault();
+    var name = $('.name3').val();
+    var phone = $('.phone3').val();
+    var message = $('.message3').text();
+    var workemail = $('.work_email3').val();
+    if (name == '') {
+      swal({
+        title: 'Поле Имя пустое',
+        text: 'Заполните поле имя',
+        type: 'error',
+        confirmButtonText: 'ок',
+      });
+      $('.name3').addClass('error');
+      setTimeout(function () {
+        $('.name3').removeClass('error');
+      }, 3000);
+    } else if (phone == '') {
+      swal({
+        title: 'Поле Телефон пустое',
+        text: 'Заполните поле телефон',
+        type: 'error',
+        confirmButtonText: 'ок',
+      });
+      $('.phone3').addClass('error');
+      setTimeout(function () {
+        $('.phone3').removeClass('error');
+      }, 3000);
+    } else if (workemail != '') {
+      swal({
+        title: 'Ах ты жулик',
+        text: 'Уберите робота от компьютера',
+        type: 'error',
+        confirmButtonText: 'ок',
+      });
+    } else {
+      $.post(
+        'mail.php',
+        {
+          name: name,
+          phone: phone,
+          message: message,
+        },
+        function () {
+          swal({
+            title: 'Спасибо',
+            text: 'Ваше сообщение отправлено',
+            type: 'success',
+            confirmButtonText: 'ок',
+          });
+          $('.name3').val('').removeClass('error');
+          $('.phone3').val('').removeClass('error');
+          $('.directPrice').removeClass('js-Active');
+          $('.js_container3')
             .addClass('bounceOutUp')
             .removeClass('bounceInDown')
             .fadeOut(600);

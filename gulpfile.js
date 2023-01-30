@@ -123,10 +123,8 @@ gulp.task('vendorsJs', function () {
 });
 
 var myjsfiles = [
-  'src/assets/js/var.js',
-  'src/assets/js/main.js',
   'src/assets/js/barnhouse.js',
-  'src/assets/js/start.js',
+  'src/assets/js/main.js',
   'src/assets/js/__resize.js',
 ];
 
