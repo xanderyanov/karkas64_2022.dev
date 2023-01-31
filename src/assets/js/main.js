@@ -223,6 +223,7 @@ $(function () {
   $('.phoneZ').mask('+7 (999) 999-9999');
   $('.phone1').mask('+7 (999) 999-9999');
   $('.phone2').mask('+7 (999) 999-9999');
+  $('.phone3').mask('+7 (999) 999-9999');
 
   $('table').wrap('<div class="table_outer"></div>');
 
@@ -316,7 +317,7 @@ $(function () {
       });
     } else {
       $.post(
-        'mail.php',
+        'mail1.php',
         {
           name: name,
           phone: phone,
@@ -415,7 +416,7 @@ $(function () {
       });
     } else {
       $.post(
-        'mail.php',
+        'mailz.php',
         {
           name: name,
           phone: phone,
@@ -490,7 +491,7 @@ $(function () {
     e.preventDefault();
     var name = $('.name2').val();
     var phone = $('.phone2').val();
-    var message = $('.message2').text();
+    var subj = $('.form2__title span').text();
     var workemail = $('.work_email2').val();
     if (name == '') {
       swal({
@@ -523,11 +524,11 @@ $(function () {
       });
     } else {
       $.post(
-        'mail.php',
+        'mail2.php',
         {
           name: name,
           phone: phone,
-          message: message,
+          subj: subj,
         },
         function () {
           swal({
@@ -598,6 +599,7 @@ $(function () {
     e.preventDefault();
     var name = $('.name3').val();
     var phone = $('.phone3').val();
+    var subj = $('.form3__title span').text();
     var message = $('.message3').text();
     var workemail = $('.work_email3').val();
     if (name == '') {
@@ -631,11 +633,11 @@ $(function () {
       });
     } else {
       $.post(
-        'mail.php',
+        'mail2.php',
         {
           name: name,
           phone: phone,
-          message: message,
+          subj: 'Барн-хаус - ' + subj,
         },
         function () {
           swal({
