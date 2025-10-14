@@ -1,0 +1,248 @@
+- var pageTitle = 'Барн-Хаусы'
+- var seoKeywords = 'Ключевые слова для страницы'
+- var seoDesc = 'Сео описание для страницы'
+- var sliderTitle1 = 'Популярные товары'
+- var commentsTitle = 'Отзывы'
+- var mainProjectsTitle = 'Наши проекты'
+
+include __const
+include __header
+include __sliders
+include __gallery
+include __forms
+include __footer
+
+include __index
+include __projects
+
+
+
+<!DOCTYPE html>
+html(lang="ru-RU")
+  head
+    +head
+  body
+    //- .site__header
+    .site__center
+      .fly__header.fly__header_dark
+        +header
+      .bh__first(style="background-image: url(assets/img/cont/contbg.jpg)")
+        .bh__firstInner 
+          .bh__firstInnerLeft 
+            h1 
+              span Модульные дома
+              span из морских контейнеров
+          .bh__firstInnerRight 
+            span от 400 тыс. рублей
+      .bhBlock__area 
+        .bhBlock.bhBlock_py
+          .bhBlock__title 
+            h2 Модульные дома из морских контейнеров - всесезонное решение
+          .bhBlock__desc
+            .content_xxl 
+              p Современные жилища из грузовых контейнеров перестали быть лишь экзотическим увлечением и превратились в популярное и разумное решение для большого числа людей. Такие постройки представляют собой уникальный архитектурный подход, позволяющий создать уютное пространство в короткие сроки. Инновационные технологии позволяют трансформировать стандартные грузовые модули в комфортабельные и эстетичные жилые помещения, подходящие как для сезонного пребывания, так и для круглогодичного проживания. Быстрая установка и адаптация под личные потребности делают этот вариант привлекательным выбором для тех, кто ищет удобное и оригинальное жилье.
+              h3 Основные преимущества контейнерных домов:
+              h4 Высокая скорость возведения
+              p Благодаря заранее подготовленным конструкциям, строительство такого дома проходит значительно быстрее традиционных методов. Модульная технология позволяет сократить сроки монтажа и отделки, позволяя хозяевам переехать в готовый дом буквально за несколько недель. Обычно весь процесс сборки и внутренней отделки длится около месяца, включая прокладку инженерных сетей и коммуникационных линий.
+              h4 Экономичность решения
+              p Модульные контейнерные дома являются экономически выгодным вариантом жилья. Современные строительные технологии обеспечивают быстрое возведение здания, которое обладает всеми необходимыми удобствами и выглядит стильно и современно. Стоимость строительства и материалов значительно ниже по сравнению с традиционным строительством, что также добавляет привлекательности этому варианту.
+              h4 Перспектива мобильности
+              p Контейнеры изначально предназначены для транспортировки грузов, что обеспечивает их высокую мобильность. Такой дом легко транспортировать и устанавливать на новом месте, делая его идеальным выбором для временных построек, загородных дачных участков и даже туристических баз. Для любителей путешествий и активных отдыхающих это настоящая находка, позволяющая регулярно менять обстановку.
+              h4 Возможность расширения
+              p Одним из ключевых преимуществ контейнерных зданий является их модульность. Вы можете начать с минимального комплекта и постепенно расширять жилое пространство по своему усмотрению. Дополнительные блоки могут использоваться для обустройства гостиных комнат, офисов или зон отдыха, создавая уникальное и функциональное пространство.
+              p Таким образом, проживание в доме из контейнера открывает перед вами массу возможностей и становится удобным, экономичным и перспективным решением для вашего будущего жилья.
+          .bhBlock__content
+      .bhBlock__area 
+        .bhBlock
+          .swiper-container.bh__container.bh__container1
+            .swiper-wrapper.bh__wrapper.bh__wrapper1
+              .swiper-slide.bh__slide.bh__slide1
+                .bh__slideInner
+                  img(src="assets/img/bh/slide1.jpg" alt="")
+              .swiper-slide.bh__slide.bh__slide1
+                .bh__slideInner
+                  img(src="assets/img/bh/slide2.jpg" alt="")
+              .swiper-slide.bh__slide.bh__slide1
+                .bh__slideInner
+                  img(src="assets/img/bh/slide3.jpg" alt="")
+              .swiper-slide.bh__slide.bh__slide1
+                .bh__slideInner
+                  img(src="assets/img/bh/slide4.jpg" alt="")
+              .swiper-slide.bh__slide.bh__slide1
+                .bh__slideInner
+                  img(src="assets/img/bh/slide5.jpg" alt="")
+            .bh__left.bh__left1
+              i.fa.fa-angle-left
+            .bh__right.bh__right1
+              i.fa.fa-angle-right
+            .swiper-pagination.bh__pagination1
+      .bhBlock__area.bh__bg1 
+        .bhBlock.bhBlock_py
+          .bh__content.content_xxl 
+              h2 Комплектация
+              ul 
+                li Фундамент винтовой.
+                li Нижняя обвязка выполнена из обрезной доски 50 х 200 - 150 х 200
+                li Лаги пола укладываются  из доски 40 х 200
+                li Пол двойной. Нижняя часть osb-3 9мм. Утеплитель 200мм. Пароизоляция с проклейкой швов. Фанера фсф 18мм.
+                li Стены выполнена из сухой строганной доски 45х145мм. Изнутри фанера экстерерная шлифованная 9мм. Пароизоляция. Утеплитель 150мм. Влаговетрозащитная мембрана. Контр обрешетка - брусок 50х50мм. Обрешетка 25х120. Метал пм-20 крашенный 0.45мм
+                li Кровля двухскатная - стропильная система: 45х145 сухая строганная доска, контр брусок 50х50, обрешетка  25х125, метал пм-20 0.45 мм
+                li Электрика под ключ.
+                li Окна: двухкамерный стеклопакет ПВХ с ламинацией, снаружи серого цвета     
+              h3 Дополнительные услуги
+              ul 
+                li Установка дополнительных окон на боковой или задней стене. Размеры окон 1800х700 мм или 800х700 мм.
+                li В каждом домике есть возможность добавить особую стену, заполненную настраиваемыми модульными шкафами в соответствии с вашими потребностями.
+                li Также можно установить откидную двуспальную кровать размером 2000х1800 мм. в стенной нише. 
+      .bhBlock__area 
+        .bhBlock.bhBlock_py
+          .bhBlock__title 
+            h2 Варианты размеров
+          .bhBlock__desc
+            .content_xxl
+              ul 
+                li В вариантах указан внутренний размер готового Барн-Хауса
+                li Высота по стене 2440 мм
+                li Высота по коньку 3600 мм
+          .offers
+            .offer__area 
+              .offer 
+                .offer__img
+                  img(src="assets/img/bh/4-3.jpg", alt="")
+                .offer__title 4 x 3 м
+                .offer__desc Площадь 12 м<sup>2</sup>
+                .offer__directPrice.directPriceBH Узнать стоимость
+            .offer__area 
+              .offer 
+                .offer__img
+                  img(src="assets/img/bh/4-4.jpg", alt="")
+                .offer__title 4 x 4 м
+                .offer__desc Площадь 16 м<sup>2</sup>
+                .offer__directPrice.directPriceBH Узнать стоимость
+            .offer__area 
+              .offer 
+                .offer__img
+                  img(src="assets/img/bh/4-5.jpg", alt="")
+                .offer__title 4 x 5 м
+                .offer__desc Площадь 20 м<sup>2</sup>
+                .offer__directPrice.directPriceBH Узнать стоимость
+            .offer__area 
+              .offer 
+                .offer__img
+                  img(src="assets/img/bh/4-6.jpg", alt="")
+                .offer__title 4 x 6 м
+                .offer__desc Площадь 24 м<sup>2</sup>
+                .offer__directPrice.directPriceBH Узнать стоимость
+      //-+projects
+
+
+      .bhBlock__area.bh__bg2 
+        .bhBlock.bhBlock_py
+          .bhBlock__title 
+            h2 Идеи и воплощения
+          .bhBlock__desc.bhBlock__desc_mb
+            .content_xxl
+              ul 
+                li Зона отдыха и сна
+                li Рабочий кабинет
+                li Творческая мастерская
+              p и другие ваши идеи применения Барн-Хауса...
+          .bh__carousel
+            .swiper-container.bh__container2
+              .swiper-wrapper.bh__wrapper2
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr1.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr1.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr2.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr2.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr3.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr3.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr4.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr4.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr5.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr5.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr6.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr6.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr7.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr7.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr8.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr8.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr9.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr9.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr10.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr10.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr11.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr11.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr12.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr12.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr13.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr13.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr14.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr14.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr15.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr15.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr16.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr16.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr17.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr17.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr18.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr18.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr19.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr19.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr20.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr20.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr21.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr21.jpg);")
+                .swiper-slide.bh__slide.bh__slide2
+                  .bh__slideInner2
+                    a.bh__slideSquare(href="assets/img/bh/pr22.jpg" data-fancybox="pr" style="background-image: url(assets/img/bh/pr22.jpg);")
+            .bh__left.bh__left2
+              i.fa.fa-angle-left
+            .bh__right.bh__right2
+              i.fa.fa-angle-right
+            .swiper-pagination.swiper__pagination2
+
+    .site__footer
+      +footer
+    .toTop
+    .overlay
+    .js_containerZ.popupCallBack.animated
+      .formZ__area
+        .formClose
+          i.fa.fa-times(aria-hidden='true')
+        .formZ_title Оставьте Ваше имя и номер телефона и мы Вам перезвоним
+        form.formZ(method='post' action='#')
+          input.nameZ(name='nameZ' type='text' placeholder='Ваше имя')
+          input.phoneZ(name='phoneZ' type='text' placeholder='Укажите Ваш номер')
+          input.work_emailZ(name='work_emailZ' type='text' placeholder='Рабочий email')
+          .form__policy
+            p
+              | *Отправляя сообщение Вы соглашаетесь с условиями
+              a(href='#' target='_blank') политики конфиденциальности
+          button.submitZ(type='submit' name='submitZ')
+            | Заказать звонок
+    script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU' type='text/javascript')
+    +scripts
+
+
+
