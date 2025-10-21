@@ -658,6 +658,117 @@ $(function () {
       );
     }
   });
+
+
+
+  $('.js_actionBtn').on('click', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var self = $(this);
+    var selfParent = $(this).parent();
+    var formDirectTitle = selfParent.children('.js_offer__title').text();
+    $('.form4__title span').text(formDirectTitle);
+    $('.form4 textarea').text(formDirectTitle);
+
+    if (self.hasClass('js_active')) {
+      self.removeClass('js_active');
+      $('.js_container4')
+        .addClass('bounceOutUp')
+        .removeClass('bounceInDown')
+        .fadeOut(600);
+      $('.overlay').fadeOut(200);
+    } else {
+      self.addClass('js_active');
+      $('.js_container4')
+        .removeClass('bounceOutUp')
+        .addClass('bounceInDown')
+        .fadeIn(200);
+      $('.overlay').fadeIn(200);
+    }
+  });
+  $('.overlay').on('click', function (e) {
+    e.preventDefault();
+    $('.js_container4')
+      .addClass('bounceOutUp')
+      .removeClass('bounceInDown')
+      .fadeOut(600);
+    $('.js_actionBtn').removeClass('js_active');
+
+    $('.overlay').fadeOut(600);
+  });
+  $('.js_close').on('click', function (e) {
+    e.preventDefault();
+    $('.js_container4')
+      .addClass('bounceOutUp')
+      .removeClass('bounceInDown')
+      .fadeOut(600);
+    $('.js_actionBtn').removeClass('js_active');
+
+    $('.overlay').fadeOut(600);
+  });
+  $('.form4').on('click', '.submit4', function (e) {
+    e.preventDefault();
+    var name = $('.name4').val();
+    var phone = $('.phone4').val();
+    var subj = $('.form4__title span').text();
+    var message = $('.message4').text();
+    var workemail = $('.work_email4').val();
+    if (name == '') {
+      swal({
+        title: 'Поле Имя пустое',
+        text: 'Заполните поле имя',
+        type: 'error',
+        confirmButtonText: 'ок',
+      });
+      $('.name4').addClass('error');
+      setTimeout(function () {
+        $('.name4').removeClass('error');
+      }, 3000);
+    } else if (phone == '') {
+      swal({
+        title: 'Поле Телефон пустое',
+        text: 'Заполните поле телефон',
+        type: 'error',
+        confirmButtonText: 'ок',
+      });
+      $('.phone4').addClass('error');
+      setTimeout(function () {
+        $('.phone4').removeClass('error');
+      }, 3000);
+    } else if (workemail != '') {
+      swal({
+        title: 'Ах ты жулик',
+        text: 'Уберите робота от компьютера',
+        type: 'error',
+        confirmButtonText: 'ок',
+      });
+    } else {
+      $.post(
+        'mail2.php',
+        {
+          name: name,
+          phone: phone,
+          subj: 'Запрос со страницы: ' + subj,
+        },
+        function () {
+          swal({
+            title: 'Спасибо',
+            text: 'Ваше сообщение отправлено',
+            type: 'success',
+            confirmButtonText: 'ок',
+          });
+          $('.name4').val('').removeClass('error');
+          $('.phone4').val('').removeClass('error');
+          $('.js_actionBtn').removeClass('js-Active');
+          $('.js_container4')
+            .addClass('bounceOutUp')
+            .removeClass('bounceInDown')
+            .fadeOut(600);
+          $('.overlay').fadeOut(200);
+        }
+      );
+    }
+  });
 });
 
 //################ likeBlock
